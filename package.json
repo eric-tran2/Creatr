@@ -1,5 +1,40 @@
 {
   "name": "Creatr",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "postinstall": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric-tran2/Creatr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eric-tran2/Creatr/issues"
+  },
+  "homepage": "https://github.com/eric-tran2/Creatr#readme",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  }
 }

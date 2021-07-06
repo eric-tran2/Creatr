@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    background-image: url('splash_background5.jpeg');
+    background-size: 100vw 100vh;
+}

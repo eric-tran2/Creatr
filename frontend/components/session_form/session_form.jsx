@@ -11,12 +11,19 @@ class SessionForm extends React.Component {
       age: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.guestLogin = this.guestLogin.bind(this);
+    this.guestLogin = this.guestLogin.bind(this);
   }
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
+    });
+  }
+
+  guestLogin() {
+    this.setState({
+      ['email']: 'guestUser@creatr.com',
+      ['password']: 'password'
     });
   }
 
@@ -39,7 +46,7 @@ class SessionForm extends React.Component {
   }
 
   
-  
+
   render() {
     let signupForm = () => null;
     if (this.props.formType === 'signup') {
@@ -68,10 +75,18 @@ class SessionForm extends React.Component {
           <br />
         </>
       )
+    } 
+
+
+    let guest_login = () => null;
+    if (this.props.formType !== 'signup') {
+      guest_login = () => (
+        <form className='guest' onSubmit={this.handleSubmit}>
+          <button onClick={this.guestLogin}>guest login</button>
+        </form>
+      )
     }
 
-    // let guestLogin = () => null;
-    
 
     return (
       <div className="login-form-container">
@@ -102,8 +117,7 @@ class SessionForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
-        
-
+        {guest_login()}
       </div>
     );
   }

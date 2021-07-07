@@ -102,6 +102,7 @@ class SessionForm extends React.Component {
           {/* Please {this.props.formType} or {this.props.navLink} */} 
           {this.renderErrors()}
           <div className="login-form">
+              {signupForm()}
             {/* <br /> */}
             <label>Email address:
               <input type="text"
@@ -119,7 +120,6 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            {signupForm()}
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>

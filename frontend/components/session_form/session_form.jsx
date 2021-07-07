@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
       age: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.guestLogin = this.guestLogin.bind(this);
   }
 
   update(field) {
@@ -36,38 +37,52 @@ class SessionForm extends React.Component {
       </ul>
     );
   }
+
+  
   
   render() {
-    let sign_up_form = () => null;
+    let signupForm = () => null;
     if (this.props.formType === 'signup') {
-      sign_up_form = () => (
+      signupForm = () => (
         <>
           <label>First name:
-            <input type="text" value={this.state.first_name} onChange={this.update('first_name')} className="login-input" />
+            <input type="text" 
+            value={this.state.first_name} 
+            onChange={this.update('first_name')} 
+            className="login-input" />
           </label>
           <br />
           <label>Last name:
-            <input type="text" value={this.state.last_name} onChange={this.update('last_name')} className="login-input" />
+            <input type="text" 
+            value={this.state.last_name} 
+            onChange={this.update('last_name')} 
+            className="login-input" />
           </label>
           <br />
-          <label>Age:
-            <input type="number" value={this.state.age} min="0" max="150" onChange={this.update('age')} className="login-input" />
+          <label>Your Age:
+            <input type="number" 
+            value={this.state.age} min="0" max="150" 
+            onChange={this.update('age')} 
+            className="login-input" />
           </label>
           <br />
         </>
       )
     }
 
+    // let guestLogin = () => null;
+    
+
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Start creating with Creatr!
-          <br />
-          Please {this.props.formType} or {this.props.navLink}
+          <h2>Start creating with Creatr!</h2>
+          {/* <br /> */}
+          {/* Please {this.props.formType} or {this.props.navLink} */} 
           {this.renderErrors()}
           <div className="login-form">
-            <br />
-            <label>Email:
+            {/* <br /> */}
+            <label>Email address:
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
@@ -83,10 +98,12 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            {sign_up_form()}
+            {signupForm()}
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+        
+
       </div>
     );
   }

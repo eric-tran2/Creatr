@@ -12,16 +12,13 @@ import {
 import { AuthRoute } from '../util/route_util';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import GreetingContainer from './greeting/greeting_container'
+import Navbar from './greeting/navbar_container'
 
 
 const App = () => (
   <div>
     <header>
-      <Link to="/" className="header-link">
-        <h1>Creatr</h1>
-      </Link>
-      <GreetingContainer />
+      <Navbar />
     </header>
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
@@ -31,3 +28,5 @@ const App = () => (
 );
 
 export default App;
+
+// '../../app/assets/images/flickr_logo.png'

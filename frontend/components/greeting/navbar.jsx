@@ -3,12 +3,19 @@ import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({ currentUser, logout }) => {
+const Navbar = ({ currentUser, logout }) => {
   const sessionLinks = () => (
-    <nav className="login-signup">
+    <nav className="nav-bar">
+      <div className="home-button">
+      <Link to="/">
+      <h1>Creatr</h1>
+      </Link>
+      </div>
+      <div className="login-signup">
       <Link to="/login">Log In</Link>
       &nbsp;   &nbsp;
       <Link to="/signup">Sign Up</Link>
+      </div>
     </nav>
   );
   const personalGreeting = () => (
@@ -22,4 +29,4 @@ const Greeting = ({ currentUser, logout }) => {
 };
 
 
-export default Greeting;
+export default Navbar;

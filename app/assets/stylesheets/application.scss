@@ -19,9 +19,30 @@
     background-size: 100vw 100vh;
 }
 
-.header-link { 
-  color: white;
+.nav-bar {
+  display: flex;
+}
+
+.home-button { 
+  color: pink;
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
   font-size: x-large;
+  align-items: center;
+}
+
+.login-signup {
+  display: flex;
+  color: pink;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  font-size: x-large;
+  align-items: center;
+
+  // flex-wrap: wrap;
+  // justify-content: flex-end;
 }
 
 /* .modal-background {

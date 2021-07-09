@@ -96,14 +96,14 @@ class SessionForm extends React.Component {
 
     return (
       <div className="login-form-container">
+        {/* <img src={window.backgroundImg} alt="background" className='sessionFormImg'/> */}
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <h2>Start creating with Creatr!</h2>
-          {/* <br /> */}
-          {/* Please {this.props.formType} or {this.props.navLink} */} 
+          <h1>Start creating with Creatr!</h1>
+          <br />
           {this.renderErrors()}
           <div className="login-form">
+            <br />
               {signupForm()}
-            {/* <br /> */}
             <label>Email address:
               <input type="text"
                 value={this.state.email}
@@ -118,6 +118,10 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
               />
+              <br />
+              <br />
+              {this.props.member} {this.props.navLink}
+              <br />
             </label>
             <br />
             <input className="session-submit" type="submit" value={this.props.formType} />

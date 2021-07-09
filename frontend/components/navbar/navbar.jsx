@@ -12,9 +12,10 @@ const Navbar = ({ currentUser, logout }) => {
       </Link>
       </div>
       <div className="login-signup">
-      <Link to="/login">Log In</Link>
-      &nbsp;   &nbsp;
-      <Link to="/signup">Sign Up</Link>
+          <a href="#/login" className="loginbutton">Log In</a>
+          &nbsp;   &nbsp;
+        {/* <Link to="/signup">Sign Up</Link> */}
+        <a href="#/signup" className="signupbutton">Sign Up</a>
       </div>
     </nav>
   );

@@ -34,15 +34,28 @@
 
 .login-signup {
   display: flex;
-  color: pink;
-  display: flex;
   justify-content: flex-end;
   flex: 1;
-  font-size: x-large;
+  font-size: medium;
   align-items: center;
+}
 
-  // flex-wrap: wrap;
-  // justify-content: flex-end;
+.loginbutton {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 1;
+  color: white;
+}
+
+.signupbutton {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: 1;
 }
 
 .header-group {

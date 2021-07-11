@@ -6,11 +6,10 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="nav-bar">
-      <div className="home-button">
       <Link to="/">
-      <h1>Creatr</h1>
+          <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_transparent1.png" alt="logo is broken" className="logo" />
       </Link>
-      </div>
+      
       <div className="login-signup">
           <a href="#/login" className="loginbutton">Log In</a>
           &nbsp;   &nbsp;

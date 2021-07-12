@@ -90,8 +90,8 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   border-radius: 30px;
   height: 340px;
-  background-color: rgba(0,0,0,.3);
-  border: 2px solid black;
+  // background-color: rgba(0,0,0,.3);
+  // border: 2px solid black;
 }
 
 .logout-button {
@@ -111,8 +111,52 @@
 }
 
 .splashMsg1 {
-  font-size: 80px;
+  font-size: 100px;
+  overflow: hidden;
+  max-width: 0rem;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: 
+  slow 3s ease forwards,
+   fadeIn 5s,
+   typing 3.5s steps(40, end),
+   blink-caret .75s step-end infinite;
+
 }
+
+@keyframes slow {
+  from {
+    max-width: 0rem;
+  }
+  to { 
+    max-width: 100rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { 
+      border-color: transparent 
+    }
+    50% { 
+      border-color: orange; 
+    }
+}
+
+
 
 .splashMsg2 {
   font-size: 35px;

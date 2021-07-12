@@ -60,26 +60,23 @@ class SessionForm extends React.Component {
         <>
           <h1>Start creating with Creatr!</h1>
           <br />
-          <label>First name:
             <input type="text" 
+            placeholder="First name"
             value={this.state.first_name} 
             onChange={this.update('first_name')} 
             className="login-input" />
-          </label>
           <br />
-          <label>Last name:
             <input type="text" 
+            placeholder="Last name"
             value={this.state.last_name} 
             onChange={this.update('last_name')} 
             className="login-input" />
-          </label>
           <br />
-          <label>Your Age:
-            <input type="number" 
+            <input type="text" 
+            placeholder="Your age"
             value={this.state.age} min="0" max="200" 
             onChange={this.update('age')} 
             className="login-input" />
-          </label>
           <br />
         </>
       )
@@ -105,17 +102,16 @@ class SessionForm extends React.Component {
           <div className="login-form">
             <br />
               {signupForm()}
-            <label>Email address:
               <input type="text"
                 value={this.state.email}
+                placeholder="Email address"
                 onChange={this.update('email')}
                 className="login-input"
               />
-            </label>
             <br />
-            <label>Password:
               <input type="password"
                 value={this.state.password}
+                placeholder="Password"
                 onChange={this.update('password')}
                 className="login-input"
               />
@@ -123,7 +119,6 @@ class SessionForm extends React.Component {
               <br />
               {this.props.member} {this.props.navLink}
               <br />
-            </label>
             <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>

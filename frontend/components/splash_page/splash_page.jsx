@@ -10,9 +10,10 @@ const SplashMessage = () => (
     <div className="splashMsg2">
     <h2>Join the Creatr community, home to tens of billions of photos and unlimited creators! </h2>
     </div>
+    <br />
+      <Link to="/signup" className="altsignupbutton">Start for free</Link>
   </div>
 )
-
 
 
 export default SplashMessage

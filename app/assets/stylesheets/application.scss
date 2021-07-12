@@ -89,8 +89,8 @@
   left: 50%;
   transform: translate(-49%, -49%);
   font-family: Georgia, 'Times New Roman', Times, serif;
-  border-radius: 30px;
-  height: 340px;
+  border-radius: 4%;
+  padding: 50px 20px 20px;
   // background-color: rgba(0,0,0,.3);
   // border: 2px solid black;
 }
@@ -181,7 +181,9 @@
 
 .session-submit {
   color:white;
-  background-color: blue;
+  background-color:#128fdc;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: x-large;
   width: 200px;
 }
 

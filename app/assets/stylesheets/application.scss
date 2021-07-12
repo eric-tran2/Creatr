@@ -38,11 +38,12 @@
 // }
 
 .login-signup {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
+  // display: flex;
+  // justify-content: flex-end;
+  // flex: 1;
   font-size: medium;
-  align-items: center;
+  // align-items: center;
+  margin-top: 15px;
 }
 
 .loginbutton {
@@ -117,7 +118,7 @@
   white-space: nowrap;
   margin: 0 auto;
   animation: 
-  slow 3s ease forwards,
+   slow 3s ease forwards,
    fadeIn 5s,
    typing 3.5s steps(40, end),
    blink-caret .75s step-end infinite;
@@ -184,17 +185,10 @@
   width: 200px;
 }
 
-// .sessionFormImg {
-//   min-height: 100%;
-//   min-width: 1024px;
-	
-//   /* Set up proportionate scaling */
-//   width: 100%;
-//   height: auto;
-	
-//   /* Set up positioning */
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-// }
+.searchbar {
+  width: 800px;
+  height: 25px;
+  text-align: center;
+  margin-top: 11px;
+}
 

@@ -12,6 +12,12 @@ const Navbar = ({ currentUser, logout }) => {
         </Link>
         <Link to='/explore'>Explore</Link>
       </div>
+      <div>
+        <input
+        type="text"
+          placeholder="🔎 Photos 📷 "
+        className="searchbar"/>
+      </div>
       <div className="login-signup">
           <a href="#/login" className="loginbutton">Log In</a>
           &nbsp;   &nbsp;

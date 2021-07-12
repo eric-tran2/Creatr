@@ -58,6 +58,8 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'signup') {
       signupForm = () => (
         <>
+          <h1>Start creating with Creatr!</h1>
+          <br />
           <label>First name:
             <input type="text" 
             value={this.state.first_name} 
@@ -74,7 +76,7 @@ class SessionForm extends React.Component {
           <br />
           <label>Your Age:
             <input type="number" 
-            value={this.state.age} min="0" max="150" 
+            value={this.state.age} min="0" max="200" 
             onChange={this.update('age')} 
             className="login-input" />
           </label>
@@ -98,7 +100,6 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         {/* <img src={window.backgroundImg} alt="background" className='sessionFormImg'/> */}
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <h1>Start creating with Creatr!</h1>
           <br />
           {this.renderErrors()}
           <div className="login-form">

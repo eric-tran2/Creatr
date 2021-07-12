@@ -25,11 +25,11 @@
 .nav-bar {
   display: flex;
   background-color: rgba(0,0,0,.2);
-  height: 70px;
+  height: 55px;
 }
 
 .logo { 
-  height: 70px;
+  height: 55px;
   flex: 1;
   
 }
@@ -62,9 +62,12 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 25px;
   font-weight: 1;
+  border-radius: 10px;
 }
 
 .header-group {
+  background-color: rgba(0,0,0,.2);
+  height: 55px;
   font-size: x-large;
 }
 
@@ -80,7 +83,13 @@
   transform: translate(-49%, -49%);
   font-family: Georgia, 'Times New Roman', Times, serif;
   border-radius: 30px;
-  height: 250px;
+  height: 340px;
+  background-color: rgba(0,0,0,.3)
+}
+
+.logout-button {
+  display: flex;
+  align-items: flex-end;
 }
 
 // .sessionFormImg {

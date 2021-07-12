@@ -8,7 +8,7 @@ const Navbar = ({ currentUser, logout }) => {
     <nav className="nav-bar">
       <div>
         <Link to="/">
-            <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_transparent1.png" alt="logo is broken" className="logo" />
+            <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" />
         </Link>
         <Link to='/explore'>Explore</Link>
       </div>
@@ -30,7 +30,7 @@ const Navbar = ({ currentUser, logout }) => {
     <hgroup className="nav-bar">
       <div>
         <Link to="/">
-            <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_transparent1.png" alt="logo is broken" className="logo" />
+            <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" />
         </Link>
         <Link to='/explore'>Explore</Link>
       </div>

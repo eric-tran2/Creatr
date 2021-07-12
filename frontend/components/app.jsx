@@ -12,7 +12,8 @@ import {
 import { AuthRoute } from '../util/route_util';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import Navbar from './navbar/navbar_container'
+import Navbar from './navbar/navbar_container';
+import PhotoContainer from './photos/photos_container';
 
 
 const App = () => (
@@ -22,8 +23,9 @@ const App = () => (
     </header>
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />      
+      <AuthRoute exact path="/signup" component={SignUpFormContainer} /> 
     </Switch>
+    <Route exact path='/explore' component={PhotoContainer}/>
   </div>
 );
 

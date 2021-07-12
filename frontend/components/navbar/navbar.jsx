@@ -6,10 +6,12 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="nav-bar">
-      <Link to="/">
-          <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_transparent1.png" alt="logo is broken" className="logo" />
-      </Link>
-      
+      <div>
+        <Link to="/">
+            <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_transparent1.png" alt="logo is broken" className="logo" />
+        </Link>
+        <Link to='/explore'>Explore</Link>
+      </div>
       <div className="login-signup">
           <a href="#/login" className="loginbutton">Log In</a>
           &nbsp;   &nbsp;
@@ -19,9 +21,17 @@ const Navbar = ({ currentUser, logout }) => {
     </nav>
   );
   const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.first_name}!</h2>
-      <button className="logout-button" onClick={logout}>Log Out</button>
+    <hgroup className="nav-bar">
+      <div>
+        <Link to="/">
+            <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_transparent1.png" alt="logo is broken" className="logo" />
+        </Link>
+        <Link to='/explore'>Explore</Link>
+      </div>
+      <div>
+        <h2 className="header-name">Hi, {currentUser.first_name}!</h2>
+        <button className="logout-button" onClick={logout}>Log Out</button>
+      </div>
     </hgroup>
   );
 

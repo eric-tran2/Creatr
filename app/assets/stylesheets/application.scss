@@ -26,12 +26,12 @@
   display: flex;
   background-color: rgba(0,0,0,.2);
   height: 55px;
+  justify-content: space-between;
 }
 
 .logo { 
   height: 55px;
   flex: 1;
-  
 }
 
 // .login-form-box {
@@ -90,6 +90,10 @@
 .logout-button {
   display: flex;
   align-items: flex-end;
+}
+
+.explorePhotos {
+  height: 200px;
 }
 
 // .sessionFormImg {

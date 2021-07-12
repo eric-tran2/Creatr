@@ -61,7 +61,14 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 25px;
   font-weight: 1;
-  border-radius: 10px;
+  background-color: white;
+  border-radius: 4%;
+  padding: 5px;
+  transition-duration: 0.3s;
+}
+
+.signupbutton:hover {
+  color: gray;
 }
 
 .header-group {
@@ -120,7 +127,11 @@
   border-radius: 4%;
   padding: 5px;
   margin-top: -100px;
+  transition-duration: 0.3s;
+}
 
+.altsignupbutton:hover {
+  color: gray;
 }
 
 .session-submit {

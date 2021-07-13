@@ -106,8 +106,20 @@
   font-size: medium;
 }
 
+.gridParent {
+  display: block;
+}
+
+.gridPhotos {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(0,500px));
+  // justify-content: space-evenly;
+}
+
 .explorePhotos {
-  height: 200px;
+  height: 500px;
+  width: 100%;
 }
 
 .splashMsg {

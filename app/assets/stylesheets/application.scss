@@ -14,10 +14,10 @@
  *= require_self
  */
 
- body{
-    background-image: url('https://creatr-seed.s3.amazonaws.com/splash1.jpg');
-    background-size: 100vw 100vh;
-}
+//  body{
+//     background-image: url('https://creatr-seed.s3.amazonaws.com/splash1.jpg');
+//     background-size: 100vw 100vh;
+// }
 
 
 
@@ -78,6 +78,7 @@
 }
 
 .login-form-container {
+  background-image: url('https://creatr-seed.s3.amazonaws.com/splash1.jpg');
   background-color: white;
   display: flex;
   color:black;
@@ -123,6 +124,8 @@
 }
 
 .splashMsg {
+  background: url("https://creatr-seed.s3.amazonaws.com/splash_background8.jpg") no-repeat center center;
+  background-size: cover;
   color: white;
   justify-content: center;
   text-align: center;

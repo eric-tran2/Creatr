@@ -11,4 +11,19 @@ class Api::PhotosController < ApplicationController
     # render :show
   end
 
+  def create
+    photo = Photo.new(photo_params)
+    photo[:author_id] = current_user.id
+    if photo.save
+      render json: {message: "Image successfully uploaded!"}
+    else
+      render json: photo.errors.full_messages
+    end
+  end
+
+  private
+  def photo_params
+    params.require(:photo).permit(:title, :description, :photo)
+  end
+
 end

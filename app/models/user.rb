@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  session_token   :string           not null
+#  first_name      :string           not null
+#  last_name       :string           not null
+#  age             :integer          not null
+#  email           :string           not null
+#  password_digest :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+
+
 class User < ApplicationRecord
 
   attr_reader :password
@@ -7,6 +24,10 @@ class User < ApplicationRecord
   validates :password_digest, :session_token, :first_name, :last_name, :age, presence: true
   
   after_initialize :ensure_session_token
+
+  has_many :photos,
+  foreign_key: :author_id,
+  class_name: :Photo
 
 
   def self.find_by_credentials(email, password)

@@ -15,6 +15,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import Navbar from './navbar/navbar_container';
 import PhotoContainer from './photos/photos_container';
 import SplashMessage from './splash_page/splash_page';
+import Footer from './footer/footer';
 
 
 const App = () => (
@@ -22,6 +23,8 @@ const App = () => (
     <header>
       <Navbar />
     </header>
+    <Footer />
+
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} /> 

@@ -120,7 +120,7 @@
   animation: 
    slow 3s ease forwards,
    fadeIn 5s,
-   typing 3.5s steps(40, end),
+   typing 4s steps(40, end),
    blink-caret .75s step-end infinite;
 
 }
@@ -187,6 +187,10 @@
   width: 200px;
 }
 
+.session-submit:hover {
+  background-color: #0e77b8;
+}
+
 .searchbar {
   width: 800px;
   height: 25px;
@@ -194,3 +198,31 @@
   margin-top: 11px;
 }
 
+.guestbutton {
+  color:white;
+  background-color:#128fdc;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: x-large;
+  width: 200px;
+}
+
+.guestbutton:hover {
+  background-color: #0e77b8;
+}
+
+// .formLogo {
+//   margin-left: 40px;
+// }
+
+.bottomfooter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 32.5px;
+  display: flex;
+  justify-content: space-evenly;
+  color: gray;
+  background-color: rgba(0,0,0,.75);
+
+}

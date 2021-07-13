@@ -58,7 +58,6 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'signup') {
       signupForm = () => (
         <>
-          <h1>Start creating with Creatr!</h1>
           <br />
             <input type="text" 
             placeholder="First name"
@@ -87,7 +86,7 @@ class SessionForm extends React.Component {
     if (this.props.formType !== 'signup') {
       guest_login = () => (
         <form className='guest' onSubmit={this.handleSubmit}>
-          <button onClick={this.guestLogin}>guest login</button>
+          <button className='guestbutton' onClick={this.guestLogin}>guest login</button>
         </form>
       )
     }
@@ -95,11 +94,13 @@ class SessionForm extends React.Component {
 
     return (
       <div className="login-form-container">
-        {/* <img src={window.backgroundImg} alt="background" className='sessionFormImg'/> */}
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
           {this.renderErrors()}
           <div className="login-form">
+            {/* <img src="https://creatr-seed.s3.amazonaws.com/c_logo.png" alt="logo is broken" className="formLogo" /> */}
+            <h1>Welcome to Creatr!</h1>
+            <br />
             <br />
               {signupForm()}
               <input type="text"

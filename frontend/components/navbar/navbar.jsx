@@ -10,14 +10,10 @@ const Navbar = ({ currentUser, logout }) => {
         <Link to="/">
             <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" />
         </Link>
-        <Link to='/explore'>Explore</Link>
+        
       </div>
       <div>
-        <input
-        type="text"
-          placeholder="🔎 Photos 📷 "
-        className="searchbar"/>
-      </div>
+        <input type="text"placeholder="🔎 Photos 📷 "className="searchbar"/></div>
       <div className="login-signup">
           <a href="#/login" className="loginbutton">Log In</a>
           &nbsp;   &nbsp;
@@ -29,11 +25,10 @@ const Navbar = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <hgroup className="nav-bar">
       <div>
-        <Link to="/">
-            <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" />
-        </Link>
-        <Link to='/explore'>Explore</Link>
+        <Link to="/"><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" /></Link>
+        <Link to='/explore' className="explorebutton">Explore</Link>
       </div>
+      <input type="text"placeholder="🔎 Photos 📷 "className="searchbar"/>
       <div>
         <h2 className="header-name">Hi, {currentUser.first_name}!</h2>
         <button className="logout-button" onClick={logout}>Log Out</button>

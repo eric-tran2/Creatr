@@ -48,7 +48,6 @@
 
 .loginbutton {
   text-decoration: none;
-  font-family: sans-serif;
   font-size: 25px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 1;
@@ -95,9 +94,16 @@
   // border: 2px solid black;
 }
 
+.header-name {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  color: white;
+}
+
 .logout-button {
-  display: flex;
   align-items: flex-end;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
 }
 
 .explorePhotos {
@@ -224,5 +230,14 @@
   justify-content: space-evenly;
   color: gray;
   background-color: rgba(0,0,0,.75);
+
+}
+
+.explorebutton {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  height: 30px;
 
 }

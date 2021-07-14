@@ -16,8 +16,7 @@ class Photo extends React.Component{
     }
     return(
       <>
-        hi
-        <img src={photo.picture_url} alt="img of something but now broke" className='photoIsBroken' key={photo.id}/>
+        <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
       </>
     )
   }

@@ -8,6 +8,7 @@ class Photos extends React.Component{
             photoFile: null,
             title: "",
             description: "",
+            photoUrl: null, // image url before it gets uploaded
 
         }
         // this.handleSubmit = this.handleSubmit.bind(this)
@@ -17,8 +18,17 @@ class Photos extends React.Component{
     }
 
     handleFile(e) {
-        this.setState({photoFile: e.currentTarget.files[0]})
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+            this.setState({photoFile: file, photoUrl: fileReader.result});
+        };
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
     }
+
+
 
     handleSubmit(e) {
         e.preventDefault();
@@ -40,6 +50,7 @@ class Photos extends React.Component{
     
     render(){
         console.log(this.state);
+        const preview = this.state.photoUrl  ? <img src={this.state.photoUrl} />  : null;
         let cont = this.props.photos;
         if(!cont) return null;
         const allPhotos = (
@@ -58,6 +69,8 @@ class Photos extends React.Component{
 
             <input type="file" 
             onChange={this.handleFile.bind(this)}/>
+            <h3>Image Preview</h3>
+            {preview}
             <button>Submit your creation</button>
             </form>
             </>

@@ -21,6 +21,20 @@ class Api::PhotosController < ApplicationController
     end
   end
 
+  def update
+    @photo = Photo.find_by(id: params[:id])
+     if @photo && @photo.update(photo_params)
+      render :show
+    else
+      render json: @photo.errors.full_messages
+    end
+  end
+
+  def destroy
+    @photo = Photo.find_by(id: params[:id])
+    @photo.destroy!
+  end
+
   private
   def photo_params
     params.require(:photo).permit(:title, :description, :photo)

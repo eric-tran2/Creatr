@@ -56,7 +56,9 @@ class Photos extends React.Component{
         const allPhotos = (
             <ul className='gridPhotos'>
                 {cont.map(photo => (
-                <img src={photo.picture_url} alt="img of something but now broke" className='explorePhotos' key={photo.id} />
+                    <Link key={photo.id}  to={`/photos/${photo.id}`}> 
+                        <img src={photo.picture_url} alt="img of something but now broke" className='explorePhotos'  />
+                    </Link>
                 ))}
             </ul>
         )

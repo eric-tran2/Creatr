@@ -16,6 +16,8 @@ import Navbar from './navbar/navbar_container';
 import PhotoContainer from './photos/photos_container';
 import SplashMessage from './splash_page/splash_page';
 import Footer from './footer/footer';
+import PhotoShowContainer from './photos/photo_show_container'
+
 
 
 const App = () => (
@@ -23,6 +25,7 @@ const App = () => (
     <header>
       <Navbar />
     </header>
+    <ProtectedRoute exact path="/photos/:photoId" component={PhotoShowContainer} />
     <Footer />
 
     <Switch>
@@ -31,6 +34,8 @@ const App = () => (
       <AuthRoute exact path="/" component={SplashMessage} />
     </Switch>
     <ProtectedRoute exact path="/explore" component={PhotoContainer}/>
+    {/* <Switch>
+    </Switch> */}
   </div>
 );
 

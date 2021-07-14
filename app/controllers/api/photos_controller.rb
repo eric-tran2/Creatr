@@ -12,12 +12,12 @@ class Api::PhotosController < ApplicationController
   end
 
   def create
-    photo = Photo.new(photo_params)
-    photo[:author_id] = current_user.id
-    if photo.save
+    @photo = Photo.new(photo_params)
+    @photo[:author_id] = current_user.id
+    if @photo.save
       render json: {message: "Image successfully uploaded!"}
     else
-      render json: photo.errors.full_messages
+      render json: @photo.errors.full_messages
     end
   end
 

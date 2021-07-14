@@ -25,7 +25,8 @@ const Navbar = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <hgroup className="nav-bar">
       <div>
-        <Link to="/"><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" /></Link>
+        {/* <Link to="/"><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" /></Link> */}
+        <Link to='/explore'><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" /></Link>
         <Link to='/explore' className="explorebutton">Explore</Link>
       </div>
       <input type="text"placeholder="🔎 Photos 📷 "className="searchbar"/>

@@ -5,10 +5,10 @@ export const requestAllPhotos = () => (
   })
 );
 
-export const requestPhoto = id => {
+export const requestPhoto = photoId => {
   return $.ajax({
     method: 'GET',
-    url: `/api/photos/${id}`
+    url: `/api/photos/${photoId}`
   })
 };
 
@@ -28,9 +28,9 @@ export const updatePhoto = photo => (
   })
 )
 
-export const destroyPhoto = id => (
+export const destroyPhoto = photoId => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/photos/{$id}`,
+    url: `/api/photos/${photoId}`,
   })
 )

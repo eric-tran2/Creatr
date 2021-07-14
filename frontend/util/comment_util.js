@@ -1,14 +1,14 @@
-export const fetchComments = photoId => (
+export const fetchComments = () => (
   $.ajax({
     method: 'GET',
-    url: `/api/comments`
+    url: `/api/comments`,
   })
 );
 
-export const fetchComment = id => (
+export const fetchComment = commentId => (
   $.ajax({
     method: 'GET',
-    url: `/api/comments/${id}`
+    url: `/api/comments/${commentId}`
   })
 )
 
@@ -28,9 +28,9 @@ export const updateComment = comment => (
   })
 )
 
-export const destroyComment = id => (
+export const destroyComment = commentId => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/comments/${id}`
+    url: `/api/comments/${commentId}`
   })
 )

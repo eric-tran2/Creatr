@@ -2,9 +2,10 @@ class Api::CommentsController < ApplicationController
 
   before_action :require_logged_in
 
-  # def index 
-  #   @comments = Comment.all
-  # end
+  def index 
+    @comments = Comment.all
+  end
+  # change index to make sure it grabs all the comments of the specific photo
 
   def show
     @comment = Comment.find(params[:id])

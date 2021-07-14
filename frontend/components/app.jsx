@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import Navbar from './navbar/navbar_container';
@@ -30,7 +30,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpFormContainer} /> 
       <AuthRoute exact path="/" component={SplashMessage} />
     </Switch>
-    <Route exact path='/explore' component={PhotoContainer}/>
+    <ProtectedRoute exact path="/explore" component={PhotoContainer}/>
   </div>
 );
 

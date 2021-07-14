@@ -26,8 +26,12 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
 
   has_many :photos,
-  foreign_key: :author_id,
-  class_name: :Photo
+    foreign_key: :author_id,
+    class_name: :Photo
+
+  has_many :comments,
+    foreign_key: :commenter_id,
+    class_name: :Comment
 
 
   def self.find_by_credentials(email, password)

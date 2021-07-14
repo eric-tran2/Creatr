@@ -17,9 +17,11 @@
 //  body{
 //     background-image: url('https://creatr-seed.s3.amazonaws.com/splash1.jpg');
 //     background-size: 100vw 100vh;
+//     z-index: 1;
 // }
 
 
+@import "variables/fonts";
 
 .nav-bar {
   display: flex;
@@ -41,15 +43,15 @@
   // display: flex;
   // justify-content: flex-end;
   // flex: 1;
-  font-size: medium;
+  // font-size: medium;
   // align-items: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .loginbutton {
   text-decoration: none;
-  font-size: 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-family: $montserrat;
   font-weight: 1;
   color: white;
 }
@@ -58,13 +60,14 @@
   text-decoration: none;
   background-color: white;
   color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px;
+  font-family: $montserrat;
+  font-size: 15px;
   font-weight: 1;
   background-color: white;
   border-radius: 4%;
-  padding: 5px;
+  padding: 7px;
   transition-duration: 0.3s;
+  margin-right: 20px;
 }
 
 .signupbutton:hover {
@@ -78,7 +81,6 @@
 }
 
 .login-form-container {
-  background-image: url('https://creatr-seed.s3.amazonaws.com/splash1.jpg');
   background-color: white;
   display: flex;
   color:black;
@@ -88,22 +90,22 @@
   top: 33%;
   left: 50%;
   transform: translate(-49%, -49%);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: $montserrat;
   border-radius: 4%;
   padding: 50px 20px 20px;
   // background-color: rgba(0,0,0,.3);
-  // border: 2px solid black;
+  border: 2px solid black;
 }
 
 .header-name {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: $montserrat;
   font-size: 30px;
   color: white;
 }
 
 .logout-button {
   align-items: flex-end;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: $montserrat;
   font-size: medium;
 }
 
@@ -121,19 +123,26 @@
 .explorePhotos {
   height: 500px;
   width: 100%;
+  margin-left: 220px;
+  margin-top: 20px;
 }
 
 .splashMsg {
+  font-family: $montserrat;
   background: url("https://creatr-seed.s3.amazonaws.com/splash_background8.jpg") no-repeat center center;
   background-size: cover;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
   color: white;
   justify-content: center;
   text-align: center;
   padding: 21% 21% 21%;
+
 }
 
 .splashMsg1 {
-  font-size: 100px;
+  font-size: 70px;
   overflow: hidden;
   max-width: 0rem;
   white-space: nowrap;
@@ -186,12 +195,13 @@
 
 .altsignupbutton {
   color: black;
-  font-size: 35px;
+  font-size: 20px;
+  font-weight: bolder;
   text-decoration: none;
   // border: 2px solid black;
   background-color: white;
   border-radius: 4%;
-  padding: 5px;
+  padding: 20px;
   margin-top: -100px;
   transition-duration: 0.3s;
 }
@@ -203,7 +213,7 @@
 .session-submit {
   color:white;
   background-color:#128fdc;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: $montserrat;
   font-size: x-large;
   width: 200px;
 }
@@ -222,7 +232,7 @@
 .guestbutton {
   color:white;
   background-color:#128fdc;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: $montserrat;
   font-size: x-large;
   width: 200px;
 }
@@ -249,7 +259,7 @@
 }
 
 .explorebutton {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: $montserrat;
   text-decoration: none;
   color: white;
   font-size: 25px;

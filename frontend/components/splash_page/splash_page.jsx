@@ -9,6 +9,8 @@ const SplashMessage = () => (
     <h2>Join the Creatr community, home to tens of billions of photos and unlimited creators! </h2>
     </div>
     <br />
+    <br />
+    <br />
       <Link to="/signup" className="altsignupbutton">Start for free</Link>
   </div>
 )

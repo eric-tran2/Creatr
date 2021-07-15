@@ -9,7 +9,7 @@ const photoReducer = (oldState = {}, action) => {
     case RECEIVE_ALL_PHOTOS:
       return action.photos // returns line 7 in photo_actions
     case RECEIVE_PHOTO:
-      nextState[action.photo.id] = action.photo
+      nextState[action.photo.photo.id] = action.photo.photo
       return nextState;
     case REMOVE_PHOTO:
       delete nextState[action.photoId]

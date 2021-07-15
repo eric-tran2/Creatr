@@ -1,5 +1,5 @@
-import { RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT } from "../actions/comment_action";
-
+import { RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT } from "../actions/comment_actions";
+import { RECEIVE_PHOTO } from "../actions/photo_actions";
 
 const commentReducer = (oldState = {}, action) => {
   Object.freeze(oldState)
@@ -11,6 +11,8 @@ const commentReducer = (oldState = {}, action) => {
     case RECEIVE_COMMENT:
       nextState[action.comment.id] = action.comment
       return nextState;
+    case RECEIVE_PHOTO:
+      return action.photo.comments 
     case REMOVE_COMMENT:
       delete nextState[action.commentId]
       return nextState;

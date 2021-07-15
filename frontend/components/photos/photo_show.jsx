@@ -18,8 +18,8 @@ class Photo extends React.Component{
     console.log(this.props)
     const { comments } = this.props.photo;
     let commentItems
-    if (this.props.photo.comments){
-      commentItems = Object.values(comments).map(comment => {
+    if (this.props.comments){
+      commentItems = Object.values(this.props.comments).map(comment => {
         return (
           <CommentIndexItem key={comment.id} comment={comment}   />
           )

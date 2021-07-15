@@ -6,6 +6,7 @@ const mapStateToProps = (state, props) => {
   // debugger
   return {
   photo: state.entities.photos[props.match.params.photoId],
+  comments: state.entities.comments
   // comments: Object.values(state.entities.photos[props.match.params.photoId].comments),
   // photoId: props.match.params.photoId
 }};

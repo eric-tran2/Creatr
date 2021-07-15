@@ -26,7 +26,6 @@ const App = () => (
     <header>
       <Navbar />
     </header>
-    <ProtectedRoute exact path="/photos/:photoId" component={PhotoShowContainer} />
     <Footer />
 
     <Switch>
@@ -34,6 +33,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpFormContainer} /> 
       <AuthRoute exact path="/" component={SplashMessage} />
     </Switch>
+    <ProtectedRoute exact path="/photos/:photoId" component={PhotoShowContainer} />
     <ProtectedRoute exact path="/explore" component={PhotoContainer}/>
     <ProtectedRoute exact path="/photos/:photo_id" component={PhotoShowContainer}/>
     {/* <Switch>

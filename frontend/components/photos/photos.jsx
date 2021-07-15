@@ -64,9 +64,6 @@ class Photos extends React.Component{
         )
         return (
             <>
-            <div className='gridParent'>
-                {allPhotos}
-            </div>
             <form onSubmit={this.handleSubmit.bind(this)}>
 
             <input type="file" 
@@ -75,6 +72,9 @@ class Photos extends React.Component{
             {preview}
             <button>Submit your creation</button>
             </form>
+            <div className='gridParent'>
+                {allPhotos}
+            </div>
             </>
         )
     }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CommentFormContainer from '../comments/comment_form_container'
 
 
 class Photo extends React.Component{
@@ -16,8 +17,12 @@ class Photo extends React.Component{
     }
     return(
       <>
+      <div>
+        <CommentFormContainer/>
+      </div>
         <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
       </>
+      
     )
   }
 }

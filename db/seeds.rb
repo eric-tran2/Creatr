@@ -38,7 +38,7 @@ photo = Photo.create!(author_id: 1).photo.attach(
   )
 
 
-
+asdasdasdasdasdasdasdhasdjashdjkas
 
 
 

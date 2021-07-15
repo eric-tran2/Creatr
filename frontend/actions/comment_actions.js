@@ -11,7 +11,7 @@ export const receiveAllComments = comments => ({
 })
 
 export const receiveComment = comment => ({
-  type: RECEIVE_COMMENT = 'RECEIVE_COMMENT',
+  type: RECEIVE_COMMENT,
   comment
 })
 
@@ -20,7 +20,8 @@ export const removeComment = commentId => ({
   commentId
 })
 
-
+//thunk functions
+// ajax response is the promise
 export const requestComments = () => dispatch => {
   return CommentUtil.fetchComments().then(comments => dispatch(receiveAllComments(comments)))
 }

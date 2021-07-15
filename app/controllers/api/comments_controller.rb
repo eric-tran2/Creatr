@@ -15,22 +15,26 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new[comment_params]
     
     if @comment.save
-      render json: {message: "Message successfully posted"}
+      render :show
     else
-      render json: comment.errors.full_messages
+      render json: @comment.errors.full_messages
     end
   end
 
   def update
     @comment = current_user.comments.find_by(id: params[:id])
     if @comment && @comment.update(comments_params)
-      render: show 
+      render :show 
     end
   end
 
   def destroy
     @comment = current_user.comments.find_by(id: params[:id])
-    @comment.destroy
+    if @comment && @comment.delete
+        render json: {message: 'Comment successfully deleted'}
+    else
+        render json: {message: 'Unsuccessful in trying to delete comment'}
+    end
   end
 
   private 

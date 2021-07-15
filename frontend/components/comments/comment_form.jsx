@@ -4,22 +4,22 @@ class CommentForm extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = {
-      body: "",
-    };
-    this.takeComment = this.takeComment.bind(this);
+    this.state = this.props.comment
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInput = this.handleInput.bind(this);
+  }
+  
+  handleInput(e){
+    this.setState({body: e.currentTarget.value})
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.state)
     this.props.createComment(this.state)
     this.setState({body: ""})
   }
    
-  takeComment(e){
-    this.setState({body: e.currentTarget.value})
-  }
 
 
   render() {
@@ -27,11 +27,14 @@ class CommentForm extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <textarea type='text'
-          cols="30"
+          cols="50"
           rows="5"
           placeholder='Add a comment'
-          onChange={this.takeComment}
+          onChange={this.handleInput}
           />
+          <input className="commentbutton"
+          type='submit'
+          value='Comment'/>
         </form>
       </div>
     )

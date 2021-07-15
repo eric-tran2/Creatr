@@ -20,6 +20,7 @@ import PhotoShowContainer from './photos/photo_show_container'
 
 
 
+
 const App = () => (
   <div>
     <header>
@@ -34,6 +35,7 @@ const App = () => (
       <AuthRoute exact path="/" component={SplashMessage} />
     </Switch>
     <ProtectedRoute exact path="/explore" component={PhotoContainer}/>
+    <ProtectedRoute exact path="/photos/:photo_id" component={PhotoShowContainer}/>
     {/* <Switch>
     </Switch> */}
   </div>

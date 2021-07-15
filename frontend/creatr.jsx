@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
   } else {
     store = configureStore();
   }
+  window.store = store;
   // let store = configureStore();
   // let preloadedState = undefined;
   // if (window.currentUser) {

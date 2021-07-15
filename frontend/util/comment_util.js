@@ -15,7 +15,7 @@ export const fetchComment = commentId => (
 export const postComment = comment => (
   $.ajax({
     method: 'POST',
-    url: `/api/comments`,
+    url: `/api/user/comments`,
     data: { comment }
   })
 )

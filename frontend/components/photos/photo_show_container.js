@@ -2,9 +2,13 @@ import { connect } from 'react-redux'
 import { requestPhoto } from '../../actions/photo_actions'
 import Photo from './photo_show'
 
-const mapStateToProps = (state, props) => ({
-  photo: state.entities.photos[props.match.params.photoId]
-});
+const mapStateToProps = (state, props) => {
+  // debugger
+  return {
+  photo: state.entities.photos[props.match.params.photoId],
+  // comments: Object.values(state.entities.photos[props.match.params.photoId].comments),
+  // photoId: props.match.params.photoId
+}};
 //setup
 
 // then send off

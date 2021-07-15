@@ -16,25 +16,29 @@ class Photo extends React.Component{
     }
     const { photo } = this.props;
     console.log(this.props)
-    const { comments } = this.props.photo;
+    // const { comments } = this.props.photo;
     let commentItems
     if (this.props.comments){
       commentItems = Object.values(this.props.comments).map(comment => {
-        return (
+          {if(!comment) return null;}
+          return(
           <CommentIndexItem key={comment.id} comment={comment}   />
-          )
-      })
+          )}
+      )
     } else {
       commentItems = null;
     }
     return(
-      <>
-      <div>
-        {commentItems}
-        <CommentFormContainer idOfPhoto={photo.id}/>
+      <div className="imageShow">
+        <div className="imageShowContent">
+          <div className='modells'></div>
+          <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
+        </div>
+        <div className="commentSection">
+          <CommentFormContainer idOfPhoto={photo.id}/>
+          {commentItems}
+        </div>
       </div>
-        <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
-      </>
       
     )
   }

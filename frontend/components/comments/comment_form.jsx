@@ -24,7 +24,6 @@ class CommentForm extends React.Component {
 
   render() {
     return(
-      <div>
         <form onSubmit={this.handleSubmit}>
           <textarea type='text'
           cols="50"
@@ -36,7 +35,6 @@ class CommentForm extends React.Component {
           type='submit'
           value='Comment'/>
         </form>
-      </div>
     )
   }
 }

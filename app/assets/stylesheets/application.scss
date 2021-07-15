@@ -23,11 +23,24 @@
 
 @import "variables/fonts";
 
+html, body, #root, #app {
+  height: 100%;
+  // position: absolute;
+  z-index: -1000
+}
+
+// #root{
+//   position: absolute;
+//   z-index: -1000;
+// }
+
 .nav-bar {
   display: flex;
   background-color: rgba(0,0,0,.2);
   height: 55px;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
 .logo { 
@@ -79,15 +92,22 @@
   height: 55px;
   font-size: x-large;
 }
-
 .login-form-container {
-  background-color: white;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  height: 100%;
+  background: url("https://creatr-seed.s3.amazonaws.com/splash_background8.jpg") no-repeat center center;
+  // z-index: -1;
+}
+.login-form-container>div{
+  
+  background-color: yellow;
   display: flex;
   color:black;
   justify-content: center;
   align-items: flex-end;
   position: absolute;
-  top: 33%;
+  top: 50%;
   left: 50%;
   transform: translate(-49%, -49%);
   font-family: $montserrat;
@@ -96,6 +116,7 @@
   // background-color: rgba(0,0,0,.3);
   border: 2px solid black;
 }
+
 
 .header-name {
   font-family: $montserrat;
@@ -129,16 +150,23 @@
 
 .splashMsg {
   font-family: $montserrat;
-  background: url("https://creatr-seed.s3.amazonaws.com/splash_background8.jpg") no-repeat center center;
-  background-size: cover;
+  // background: url("https://creatr-seed.s3.amazonaws.com/splash_background8.jpg") no-repeat center center;
+  // background-size: cover;
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -1;
   color: white;
   justify-content: center;
   text-align: center;
   padding: 21% 21% 21%;
-
+  >img {
+    position: absolute;
+    top: 0; left: 0; right: 0; 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    overflow: hidden;
+  }
 }
 
 .splashMsg1 {
@@ -255,6 +283,8 @@
   justify-content: space-evenly;
   color: gray;
   background-color: rgba(0,0,0,.75);
+  // position: relative;
+  z-index: 1;
 
 }
 
@@ -268,10 +298,35 @@
 }
 
 .showpagephoto {
-  width: 1000px;
-  height: 1000px;
-  // align-items: center;
-  // position: absolute;
-  margin-left: 700px;
-  margin-top: 100px;
+  // width: 1000px;
+  height: 57%;
+  position: absolute;
+  left: 50%; top: 35%;
+  transform: translate(-50%,-50%)
+}
+
+.modells {
+  position: absolute;
+  top: 0; left:0; right: 0; 
+  height: 70%;
+  background-color: #212124;
+  z-index: -1;
+}
+
+.imageShow {
+  overflow-y: scroll;
+  position: absolute;
+  top: 0; left:0; right: 0; bottom: 0;
+
+}
+
+.commentSection{
+  position: absolute;
+  top: 70%;
+  padding: 100px;
+  height: 500px;
+}
+
+#personalGreeting {
+  background-color: #212124;
 }

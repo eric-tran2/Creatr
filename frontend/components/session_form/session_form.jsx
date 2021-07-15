@@ -85,20 +85,21 @@ class SessionForm extends React.Component {
     let guest_login = () => null;
     if (this.props.formType !== 'signup') {
       guest_login = () => (
-        <form className='guest' onSubmit={this.handleSubmit}>
+        // <form className='guest' onSubmit={this.handleSubmit}>
           <button className='guestbutton' onClick={this.guestLogin}>guest login</button>
-        </form>
+        // </form>
       )
     }
 
 
     return (
       <div className="login-form-container">
+        <div>
+
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
           {this.renderErrors()}
           <div className="login-form">
-            {/* <img src="https://creatr-seed.s3.amazonaws.com/c_logo.png" alt="logo is broken" className="formLogo" /> */}
             <h1>Welcome to Creatr!</h1>
             <br />
             <br />
@@ -108,24 +109,26 @@ class SessionForm extends React.Component {
                 placeholder="Email address"
                 onChange={this.update('email')}
                 className="login-input"
-              />
+                />
             <br />
               <input type="password"
                 value={this.state.password}
                 placeholder="Password"
                 onChange={this.update('password')}
                 className="login-input"
-              />
+                />
               <br />
               <br />
               {this.props.member} {this.props.navLink}
               <br />
             <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <br />
+            {guest_login()}
           </div>
         </form>
-        {guest_login()}
       </div>
+    </div>
     );
   }
 }

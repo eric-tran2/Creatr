@@ -23,7 +23,7 @@ const Navbar = ({ currentUser, logout }) => {
     </nav>
   );
   const personalGreeting = () => (
-    <hgroup className="nav-bar">
+    <hgroup className="nav-bar" id="personalGreeting">
       <div>
         {/* <Link to="/"><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" /></Link> */}
         <Link to='/explore'><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" /></Link>

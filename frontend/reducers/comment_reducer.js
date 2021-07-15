@@ -9,10 +9,14 @@ const commentReducer = (oldState = {}, action) => {
     case RECEIVE_ALL_COMMENTS: 
       return action.comments;
     case RECEIVE_COMMENT:
-      nextState[action.comment.id] = action.comment
+      nextState[action.comment.id] = action.comments
       return nextState;
     case RECEIVE_PHOTO:
-      return action.photo.comments 
+      if(action.photo.comments){
+        return action.photo.comments
+      } else {
+        return oldState
+      }
     case REMOVE_COMMENT:
       delete nextState[action.commentId]
       return nextState;

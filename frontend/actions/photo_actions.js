@@ -9,10 +9,11 @@ export const receiveAllPhotos = photos => ({
   photos
 });
 
-export const receivePhoto = photo => ({
+export const receivePhoto = photo => {
+  return ({
   type: RECEIVE_PHOTO,
   photo
-});
+})};
 
 export const removePhoto = photoId => ({
   type: REMOVE_PHOTO,

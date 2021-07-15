@@ -3,7 +3,6 @@ import { requestPhoto } from '../../actions/photo_actions'
 import Photo from './photo_show'
 
 const mapStateToProps = (state, props) => {
-  // debugger
   return {
   photo: state.entities.photos[props.match.params.photoId],
   comments: state.entities.comments

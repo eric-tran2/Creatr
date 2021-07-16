@@ -101,9 +101,8 @@ html, body, #root, #app {
 }
 .login-form-container>div{
   
-  background-color: yellow;
+  background-color: white;
   display: flex;
-  color:black;
   justify-content: center;
   align-items: flex-end;
   position: absolute;
@@ -114,7 +113,6 @@ html, body, #root, #app {
   border-radius: 4%;
   padding: 50px 20px 20px;
   // background-color: rgba(0,0,0,.3);
-  border: 2px solid black;
 }
 
 
@@ -170,7 +168,7 @@ html, body, #root, #app {
 }
 
 .splashMsg1 {
-  font-size: 70px;
+  font-size: 60px;
   overflow: hidden;
   max-width: 0rem;
   white-space: nowrap;
@@ -218,7 +216,7 @@ html, body, #root, #app {
 
 
 .splashMsg2 {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .altsignupbutton {
@@ -242,8 +240,11 @@ html, body, #root, #app {
   color:white;
   background-color:#128fdc;
   font-family: $montserrat;
-  font-size: x-large;
-  width: 200px;
+  font-size: 15px;
+  border-radius: 4%;
+  padding: 5px;
+  width: 300px;
+  height: 50%;
 }
 
 .session-submit:hover {
@@ -262,7 +263,11 @@ html, body, #root, #app {
   background-color:#128fdc;
   font-family: $montserrat;
   font-size: x-large;
-  width: 200px;
+  font-size: 15px;
+  border-radius: 4%;
+  padding: 5px;
+  width: 300px;
+  height: 50%;
 }
 
 .guestbutton:hover {
@@ -329,4 +334,8 @@ html, body, #root, #app {
 
 #personalGreeting {
   background-color: #212124;
+}
+
+.testing {
+  height: 100px;
 }

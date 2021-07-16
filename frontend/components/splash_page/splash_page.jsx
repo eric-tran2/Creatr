@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const SplashMessage = () => {
   const images = [
-    "https://creatr-seed.s3.amazonaws.com/splash_background8.jpg",
-    "https://creatr-seed.s3.amazonaws.com/splash1.jpg"
+    "https://creatr-seed.s3.amazonaws.com/splash_background3.jpg",
+    "https://creatr-seed.s3.amazonaws.com/splash_background18.jpg",
   ]
   return (<div className="splashMsg">
     <img src={images[Math.floor(Math.random()*images.length)]} alt="is broken" />

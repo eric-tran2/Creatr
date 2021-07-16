@@ -74,7 +74,7 @@ class SessionForm extends React.Component {
             className="login-input" />
           <br />
             <input 
-            type="text" 
+            type="number" 
             placeholder="Your age"
             value={this.state.age} min="0" max="200" 
             onChange={this.update('age')} 

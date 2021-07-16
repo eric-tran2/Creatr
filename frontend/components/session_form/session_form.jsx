@@ -59,19 +59,22 @@ class SessionForm extends React.Component {
       signupForm = () => (
         <>
           <br />
-            <input type="text" 
+            <input 
+            type="text" 
             placeholder="First name"
             value={this.state.first_name} 
             onChange={this.update('first_name')} 
             className="login-input" />
           <br />
-            <input type="text" 
+            <input 
+            type="text" 
             placeholder="Last name"
             value={this.state.last_name} 
             onChange={this.update('last_name')} 
             className="login-input" />
           <br />
-            <input type="text" 
+            <input 
+            type="text" 
             placeholder="Your age"
             value={this.state.age} min="0" max="200" 
             onChange={this.update('age')} 
@@ -98,20 +101,25 @@ class SessionForm extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
-          {this.renderErrors()}
+              <img src="https://creatr-seed.s3.amazonaws.com/c_logo.png" alt="broken" className="formLogo"/>
           <div className="login-form">
             <h1>Welcome to Creatr!</h1>
             <br />
+            <div className="errorMsg">
+          {this.renderErrors()}
+            </div>
             <br />
               {signupForm()}
-              <input type="text"
+              <input 
+                type="text"
                 value={this.state.email}
                 placeholder="Email address"
                 onChange={this.update('email')}
                 className="login-input"
                 />
             <br />
-              <input type="password"
+              <input 
+                type="password"
                 value={this.state.password}
                 placeholder="Password"
                 onChange={this.update('password')}
@@ -119,12 +127,12 @@ class SessionForm extends React.Component {
                 />
               <br />
               <br />
-              {this.props.member} {this.props.navLink}
-              <br />
-            <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
             <br />
             {guest_login()}
+            <br />
+            <br />
+            {this.props.member} {this.props.navLink}
           </div>
         </form>
       </div>

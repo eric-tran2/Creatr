@@ -168,8 +168,8 @@ html, body, #root, #app {
 }
 
 .splashMsg1 {
-  font-size: 60px;
-  overflow: hidden;
+  font-size: 70px;
+  // overflow: hidden; // cut off my text
   max-width: 0rem;
   white-space: nowrap;
   margin: 0 auto;

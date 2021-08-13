@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const SplashMessage = () => {
   const images = [
-    "https://creatr-seed.s3.amazonaws.com/splash_background3.jpg",
+    // "https://creatr-seed.s3.amazonaws.com/splash_background3.jpg",
     "https://creatr-seed.s3.amazonaws.com/splash_background18.jpg",
   ]
   return (<div className="splashMsg">

@@ -199,19 +199,19 @@ html, body, #root, #app {
   }
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+// @keyframes typing {
+//     from { width: 0 }
+//     to { width: 100% }
+// }
 
-@keyframes blink-caret {
-    from, to { 
-      border-color: transparent 
-    }
-    50% { 
-      border-color: orange; 
-    }
-}
+// @keyframes blink-caret {
+//     from, to { 
+//       border-color: transparent 
+//     }
+//     50% { 
+//       border-color: orange; 
+//     }
+// }
 
 
 
@@ -295,6 +295,15 @@ html, body, #root, #app {
 }
 
 .explorebutton {
+  font-family: $montserrat;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  margin-bottom: 5%;
+
+}
+
+.uploadButton {
   font-family: $montserrat;
   text-decoration: none;
   color: white;

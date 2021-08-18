@@ -1,0 +1,462 @@
+[33mcommit be86bc9f694f50e0e6b7a38471ee3537d17bb6be[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Aug 18 05:48:56 2021 -0400
+
+    add favorites schema
+
+[33mcommit bd140869c7c2b8ac878f144592835179fe0d56f6[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Aug 16 10:58:43 2021 -0400
+
+    test commit
+
+[33mcommit 36bd2c50da6ea10a6c868f9e9327510628af0417[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Aug 13 18:16:40 2021 -0400
+
+    protected route for uploads
+
+[33mcommit 702a6f65f1ef863b4ce828a0917a4bd74c3e80de[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Aug 12 23:34:07 2021 -0400
+
+    add upload button on navbar
+
+[33mcommit db259041c488c9e49ec0191f2ec68330a4cb248a[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Aug 12 22:57:55 2021 -0400
+
+    adjust splash css
+
+[33mcommit 558caa57fe1b5a9d581591b251d6d2af5f6baae1[m
+Merge: 97feb38 810f065
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 26 09:28:31 2021 -0400
+
+    test
+
+[33mcommit 97feb385bde696cc961e7bdce29885e41e47def0[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Sun Jul 25 15:26:23 2021 -0400
+
+    change splashmsg1 cut off
+
+[33mcommit 810f06525ff3fe1ab11d2f3d47d90d70f3256fe4[m
+Author: eric-tran2 <82416560+eric-tran2@users.noreply.github.com>
+Date:   Fri Jul 16 10:01:28 2021 -0400
+
+    Update README.md
+
+[33mcommit ec043fbf2515a0eb4501dc134c09b309f64fe6b9[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 16 02:10:18 2021 -0400
+
+    css changes
+
+[33mcommit 3d6f9918be60d4fe6d9ddaa8b15b087ed578c150[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 16 01:26:02 2021 -0400
+
+    more css changes
+
+[33mcommit 94670f937caf26c8b073e55d22d99ffc87cd48f4[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 16 00:23:02 2021 -0400
+
+    slight css changes
+
+[33mcommit 10763e02aa3adc3a4cecec0f6ad899d9e5b717e9[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 15 19:50:04 2021 -0400
+
+    fixed up a lot of css
+
+[33mcommit 521991defe71f4cf73476bed887fab5d43a39561[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 15 17:36:05 2021 -0400
+
+    fixed missing comments.id
+
+[33mcommit 9168960c37713ae684a1aba8d21bdecaa928eb71[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 15 16:52:31 2021 -0400
+
+    got comments to render at the same time
+
+[33mcommit 54a6ad80e484770ddf542170201b3efbaa02ce67[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 15 15:05:44 2021 -0400
+
+    fixed routing error
+
+[33mcommit 710ef4c72a16bb001da977ef929b231a91a99ccc[m[33m ([m[1;31morigin/debugger[m[33m)[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 15 12:13:22 2021 -0400
+
+    got comments to post
+
+[33mcommit 88a3d3984b237ba2e9e96fb6e0cb8e81bb30b953[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 15 02:18:22 2021 -0400
+
+    remade all the comments n backend/frontend (still incomplete)
+
+[33mcommit 36d71c8efcb247d819372f0a0f587298210d9889[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 22:28:56 2021 -0400
+
+    testing debugger branch
+
+[33mcommit 8bb6549933f390bab488c0abbdeab5fc2379634a[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 19:20:47 2021 -0400
+
+    turned logo into explore button when logged on
+
+[33mcommit 98925cd6d7a394160069bc86da74836d2e9a741a[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 18:44:25 2021 -0400
+
+    revised photo reducers and added comment reducers
+
+[33mcommit 2d09b5f540c5653f9f745d233be721263b887f77[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 18:09:13 2021 -0400
+
+    fixed up photos util and actions and finished comments actions and utils
+
+[33mcommit 2071036d3517999f4be03256fd9ec0a804337f04[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 16:44:46 2021 -0400
+
+    added comment utils and adjusted photos utils
+
+[33mcommit 98568b05db8c0906911eb911a3f49e5e4df10161[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 16:18:15 2021 -0400
+
+    comment backend
+
+[33mcommit 1c28291fd47d47f3ac56d95888c07e5e2b801d8c[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 14:26:04 2021 -0400
+
+    comments associations
+
+[33mcommit 27d638a479ca79b65aff30e83aedea3722c9332c[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 14:12:14 2021 -0400
+
+    starting on comments mvp
+
+[33mcommit 2effc67e6f4b9b8138d0239a930453ccb1e51950[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 11:17:21 2021 -0400
+
+    photo show page is working now
+
+[33mcommit 20a10ae9786099f14239d1d0c6d8710d172a21c5[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 03:55:23 2021 -0400
+
+     added protected routes
+
+[33mcommit 3100de35822a6b5e22308e23df2706bf3d2ab574[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 14 01:45:35 2021 -0400
+
+    added image previews
+
+[33mcommit 1f24b7e2f1a87d87ee34b4f804f1732d71239703[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 13 23:17:13 2021 -0400
+
+    slight css tweak
+
+[33mcommit 7f2aac3c8d73897076ce15016f22b359a077c639[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 13 22:10:38 2021 -0400
+
+    fixed some css styling
+
+[33mcommit 16baa7d8cce43efdd9ffdbfb40ef7dfb94448f01[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 13 14:14:00 2021 -0400
+
+    allow photos to be added by user
+
+[33mcommit 9c18b667cdf910e01836718a4fb32ec802fed44d[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 13 10:35:20 2021 -0400
+
+    added photos to explore page and created grid like look
+
+[33mcommit 57a79d261a3b98bbc7185935a81e0196948e391d[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 13 03:41:29 2021 -0400
+
+    added search bar to logged out navbar
+
+[33mcommit f5c414cefdbf02362b541823b940535b792f0f5d[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 13 03:06:36 2021 -0400
+
+    added footer with deadlinks and did more css
+
+[33mcommit ab9589b6518df23bbe0e7526ba3729313b80800c[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 12 17:36:22 2021 -0400
+
+    fixed transparent logo
+
+[33mcommit 0e4625b486325a6a833c52864d2f8c31c9f1af93[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 12 16:48:52 2021 -0400
+
+    more css
+
+[33mcommit e7221d556ec74b5aa90a00221f8364fb40227d0f[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 12 16:21:51 2021 -0400
+
+    added search bar css placeholder css
+
+[33mcommit 0617e910c10e2c9a5296e452a3b417a213f2d34b[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 12 15:22:24 2021 -0400
+
+    added animation css
+
+[33mcommit 9f16e2805f0c3d95c0c91a7eaa1272f80d47d8d3[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 12 14:07:42 2021 -0400
+
+    more homepage css styling
+
+[33mcommit 01f8b538b914d65ca8dc536a42f4997498f03d55[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 12 13:56:04 2021 -0400
+
+    more css styling
+
+[33mcommit 7f1947a537f111640f936a2daa63039bba0b4dfc[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 12 10:59:38 2021 -0400
+
+    added more to splash page
+
+[33mcommit 5f27de1d9ad1f93b2e7c822d1f5aed90e6b1fc9e[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 12 01:14:24 2021 -0400
+
+    added an explore page with pictures
+
+[33mcommit 6427e1ee0fde1302982bad33bd375d83918f6722[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Sun Jul 11 22:13:49 2021 -0400
+
+    added logged on navbar
+
+[33mcommit 91844bc0543c506260c8b63390f78e5452bbf701[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Sun Jul 11 20:03:34 2021 -0400
+
+    some templating css
+
+[33mcommit 583dcaa1999d6445b36968fcb3c786855f304f17[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Sun Jul 11 19:09:03 2021 -0400
+
+    added a logo
+
+[33mcommit 0e44a4f223a61c8cc8594a3c90f1ea32f585f19d[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 9 18:01:27 2021 -0400
+
+    css styling more
+
+[33mcommit 298bb880a191606f113dbbb2bb3dd56fda4b28c1[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 9 16:34:33 2021 -0400
+
+    touched up on some css
+
+[33mcommit 5712bbaad0285a70c772514e4cc125ee49dd1f58[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 9 15:19:01 2021 -0400
+
+    css adjustments
+
+[33mcommit 72d9c4ee4abaf8e997329f2856dd9747a356c8e1[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 9 14:12:39 2021 -0400
+
+    fixing seeding issues
+
+[33mcommit 9580783f35a4d20d214604bdca54fab5f38f263a[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 9 13:40:42 2021 -0400
+
+    added filing to photo mvp
+
+[33mcommit c59926ccb2e9b5f44f46b947b2441813e3791d5f[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 9 10:34:39 2021 -0400
+
+    started on aws and photos mvp
+
+[33mcommit 233beba30f1339fe5cd0e73d61ed3ee148f64326[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 8 14:34:59 2021 -0400
+
+    added photos migration table
+
+[33mcommit 364d9c2c12207f5806397b2800b3ad51257ef0ac[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 8 13:41:01 2021 -0400
+
+    users stays logged on after refreshing
+
+[33mcommit 4110750cf1057cb67569297f78d053bd352f230b[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 8 10:42:20 2021 -0400
+
+    centered forms
+
+[33mcommit d90eba84128ef1418f9edadbad7a19bf7f11253b[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 8 10:21:01 2021 -0400
+
+    implemented sufficient navbar
+
+[33mcommit 6a3f67fc0367b2673ff06e52dbfe868b55f6030b[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jul 8 01:17:07 2021 -0400
+
+    starting work on navbar
+
+[33mcommit 84afccd7b2199cc3ac45ecaa9af0a06a06d754d8[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 7 22:18:38 2021 -0400
+
+    slight css changes
+
+[33mcommit e31a0e1b91060b1c79f190d3bcae6338f657d981[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 7 16:33:03 2021 -0400
+
+    made the sign up form in right order
+
+[33mcommit 21cd2735168df297daae2e540e2ca310bef87977[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 7 16:22:32 2021 -0400
+
+    fixed errors that stay after pressing login/signup
+
+[33mcommit 65764661bbd714b5af2dc69559ec4dc9cf2e3e2a[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 7 14:42:48 2021 -0400
+
+    fixed the error where it was validating email twice
+
+[33mcommit 4514fee6395aed41bffd1d1c875b47388f5b5d66[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 7 14:27:01 2021 -0400
+
+    added authroute, no more form on login
+
+[33mcommit 51ca1da816cfbd62c11e54d8b5a5f004d61b48cf[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 7 03:47:03 2021 -0400
+
+    got a working demo user
+
+[33mcommit a43e9face26ce6bbd5d95e660ebc636bd1c1587f[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Wed Jul 7 03:18:11 2021 -0400
+
+    slight changes and prepping demo login
+
+[33mcommit fd8d5c2c0287e56de1d390f5933284e3b44eb8ff[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 6 17:19:56 2021 -0400
+
+    added extra validations and changed age display
+
+[33mcommit 2eb30a369cefe7e09d924565c253dc3dd9080288[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 6 13:44:09 2021 -0400
+
+    fixed login and got it working :D
+
+[33mcommit f3b1acef03b6e850f81d31397a8d95a8ddc93754[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 6 08:49:06 2021 -0400
+
+    change status error
+
+[33mcommit 57cb81b621d208decddbaeb68ee063ec6064caea[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Tue Jul 6 00:10:18 2021 -0400
+
+    should fix issue with image not loading on heroku
+
+[33mcommit 2786d620db9ad9561f36afe530557d70d47bd7e6[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 5 23:55:45 2021 -0400
+
+    added hd photos + add splash page background
+
+[33mcommit fff61efab8ac11efa0849df1016dbfccda401198[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 5 23:37:56 2021 -0400
+
+    added splash backgrounds (for transition purposes)
+
+[33mcommit 877c58a68526741c1b1b8fc3a2d0d6106873fd48[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 5 21:51:00 2021 -0400
+
+    got the auth to render
+
+[33mcommit 8baca66b2b1c9f92b399362349f99dc1d21c99a1[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Mon Jul 5 06:24:56 2021 -0400
+
+    just added webpack mode development
+
+[33mcommit feabc62d90c1aa169b570403f6110d0e957e9382[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Sat Jul 3 00:33:29 2021 -0400
+
+    pushed to heroku
+
+[33mcommit a3b03308b48ad6c3bfa685b1b5cbdfc52828c992[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Sat Jul 3 00:07:07 2021 -0400
+
+    testing again
+
+[33mcommit fafab13e1fa2cf71ecc537c0b3cecd9fb8f5582c[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Sat Jul 3 00:02:42 2021 -0400
+
+    test
+
+[33mcommit d2d717dc85b20deea021f7725dc45c1b9178c317[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Fri Jul 2 18:01:45 2021 -0400
+
+    front end file done, working on pushing to heroku
+
+[33mcommit 0a581a104a472646bc4c95d989191db48f4e806e[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jun 24 08:59:59 2021 -0400
+
+    initial commit
+
+[33mcommit c8e545c4d436ffc4eecb097605f1af57054c2f9c[m
+Author: Eric Tran <eric.tran119@gmail.com>
+Date:   Thu Jun 24 08:59:32 2021 -0400
+
+    first commit

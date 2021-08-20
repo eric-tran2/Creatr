@@ -1,5 +1,5 @@
 class Api::FavoritesController < ApplicationController
-  before action :require_logged_in
+  before_action :require_logged_in
 
   def create 
 

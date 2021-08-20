@@ -1,6 +1,22 @@
 class Api::FavoritesController < ApplicationController
   before action :require_logged_in
 
+  def create 
+
+  end
+
+  def show
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
+  end
+
   private 
   
   def favorite_params

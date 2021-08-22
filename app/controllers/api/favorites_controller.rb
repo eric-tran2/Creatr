@@ -8,11 +8,15 @@ class Api::FavoritesController < ApplicationController
     else
       render json: @favorite.errors.full_messages
     end
-
   end
 
   def destroy
-
+    @favorite = current_user.favorite.find_by()
+    if @favorite && @favorite.delete
+      render json: {message: 'Favorite successfully deleted'}
+    else
+      render json: {message: 'Unsuccessful in trying to delete favorite'}
+    end
   end
 
   def show

@@ -5,15 +5,15 @@ class Api::FavoritesController < ApplicationController
 
   end
 
+  def destroy
+
+  end
+
   def show
 
   end
 
   def update
-
-  end
-
-  def destroy
 
   end
 

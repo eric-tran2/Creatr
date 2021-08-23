@@ -20,7 +20,7 @@ class Api::FavoritesController < ApplicationController
   end
 
   def index 
-    @favorite = Favorite.find(params[:id])
+    @favorites = Favorite.all
   end
 
   def show

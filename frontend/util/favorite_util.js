@@ -4,3 +4,10 @@ export const fetchFavorites = () => (
     url: `/api/favorites`,
   })
 );
+
+export const fetchFavorite = favoriteId => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/comments/${favoriteId}`
+  })
+);

@@ -11,7 +11,7 @@ class Api::FavoritesController < ApplicationController
   end
 
   def destroy
-    @favorite = current_user.favorite.find_by(id: params[:id])
+    @favorite = Favorite.find_by(id: params[:id])
     if @favorite && @favorite.destroy
       render json: {message: 'Photo has been favorited successfully'}
     else

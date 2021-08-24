@@ -37,6 +37,10 @@ class User < ApplicationRecord
     foreign_key: :favoriter_id,
     class_name: :Favorite
 
+  has_many :favorited_photos,
+    through: :favorites,
+    source: :photo
+
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

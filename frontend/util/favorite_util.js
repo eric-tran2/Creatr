@@ -18,3 +18,10 @@ export const postCFavorite = Favorite => (
     data: { favorite }
   })
 )
+
+export const destroyFavorite = favoriteId => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/favorites/${favoriteId}`,
+  })
+)

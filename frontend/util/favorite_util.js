@@ -14,6 +14,7 @@ export const fetchFavorite = favoriteId => (
 
 export const postCFavorite = Favorite => (
   $.ajax({
+    method: 'POST',
     url: `/api/user/favorites`,
     data: { favorite }
   })

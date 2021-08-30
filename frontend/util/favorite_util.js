@@ -11,3 +11,10 @@ export const fetchFavorite = favoriteId => (
     url: `/api/comments/${favoriteId}`
   })
 );
+
+export const postCFavorite = Favorite => (
+  $.ajax({
+    url: `/api/user/favorites`,
+    data: { favorite }
+  })
+)

@@ -18,3 +18,7 @@ export const removeFavorite = favoriteId => ({
   type: REMOVE_FAVORITE,
   favoriteId
 })
+
+export const requestFavorites = () => dispatch => {
+  return FavoriteUtil.fetchFavorites().then(favorites => dispatch(receiveAllFavorites(favorites)))
+}

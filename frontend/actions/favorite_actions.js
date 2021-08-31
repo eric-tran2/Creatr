@@ -8,3 +8,8 @@ export const receiveAllFavorites = favorites => ({
   type: RECEIVE_ALL_FAVORITES,
   favorites
 })
+
+export const receiveFavorite = favorite => ({
+  type: RECEIVE_FAVORITE,
+  favorite
+})

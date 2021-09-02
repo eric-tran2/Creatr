@@ -1,4 +1,5 @@
 import { RECEIVE_ALL_FAVORITES, RECEIVE_FAVORITE, REMOVE_FAVORITE } from "../actions/favorite_actions";
+import { RECEIVE_PHOTO } from "../actions/photo_actions";
 
 
 const favoriteReducer = (oldState = {}, action) => {
@@ -11,6 +12,12 @@ const favoriteReducer = (oldState = {}, action) => {
     case RECEIVE_FAVORITE:
       nextState[action.favorite.id] = action.favorite
       return nextState;
+    case RECEIVE_PHOTO:
+      if(action.photo.favorites){
+        return action.photo.favorites
+      } else {
+        return oldState
+      }
       
       break;
   

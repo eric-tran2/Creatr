@@ -18,9 +18,9 @@ const favoriteReducer = (oldState = {}, action) => {
       } else {
         return oldState
       }
-      
-      break;
-  
+    case REMOVE_FAVORITE:
+      delete nextState[action.favoriteId]
+      return nextState;  
     default:
       return oldState;
   }

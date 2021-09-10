@@ -12,7 +12,7 @@ export const fetchFavorite = favoriteId => (
   })
 );
 
-export const postFavorite = Favorite => (
+export const postFavorite = favorite => (
   $.ajax({
     method: 'POST',
     url: `/api/user/favorites`,

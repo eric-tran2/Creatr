@@ -4,7 +4,8 @@ import FavoriteShow from './favorite_show';
 
 const mapStateToProps = (state, ownProps) => ({
   favorite: {
-    photo_id: parseInt(ownProps.idOfPhoto),
+    // photo_id: parseInt(ownProps.idOfPhoto),
+    photo_id: state.entities.photos.id,
     favoriter_id: state.session.id,
     favorites: state.session.favorites
   }

@@ -24,7 +24,7 @@ export const requestFavorites = () => dispatch => {
 }
 
 export const createFavorite = favorite => dispatch => {
-  return FavoriteUtil.postFavorite(favorite).then(comment => dispatch(receiveFavorite(favorite)))
+  return FavoriteUtil.postFavorite(favorite).then(favorite => dispatch(receiveFavorite(favorite)))
 }
 
 export const deleteFavorite = favoriteId => dispatch => {

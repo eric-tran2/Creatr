@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CommentFormContainer from '../comments/comment_form_container'
 import CommentIndexItem from '../comments/comment_index_item'
+import FavoriteShowContainer from '../favorites/favorite_form_container'
 
 
 class Photo extends React.Component{
@@ -34,11 +35,17 @@ class Photo extends React.Component{
           <div className='modells'></div>
           <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
         </div>
-        <div className="commentSection">
-          <CommentFormContainer idOfPhoto={photo.id}/>
-          {commentItems}
+
+          <div className="commentsNfavorites">
+              <div className="commentSection">
+                <CommentFormContainer idOfPhoto={photo.id}/>
+                {commentItems}
+              </div>
+              <div className="favoriteSection">
+                <FavoriteShowContainer idOfPhoto={photo.id}/>
+              </div>
+          </div>
         </div>
-      </div>
       
     )
   }

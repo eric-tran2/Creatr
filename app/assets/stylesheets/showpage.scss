@@ -1,0 +1,18 @@
+.commentsNfavorites {
+  border: 100px solid red;
+  display: flex;
+  flex-direction: row;
+
+  .commentSection {
+    border: 1px solid blue;
+
+  }
+}
+
+.showpagephoto {
+  // width: 1000px;
+  height: 57%;
+  position: absolute;
+  left: 50%; top: 35%;
+  transform: translate(-50%,-50%)
+}

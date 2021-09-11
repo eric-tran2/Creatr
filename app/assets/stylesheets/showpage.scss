@@ -1,18 +1,44 @@
-.commentsNfavorites {
-  border: 100px solid red;
-  display: flex;
-  flex-direction: row;
 
-  .commentSection {
-    border: 1px solid blue;
-
-  }
-}
-
-.showpagephoto {
-  // width: 1000px;
-  height: 57%;
+//photo show page
+.imageShow{
+  overflow-y: scroll;
   position: absolute;
-  left: 50%; top: 35%;
-  transform: translate(-50%,-50%)
+  top: 0; left:0; right: 0; bottom: 0;
+  border: 1px yellow solid;
+
+
+  .imageShowContent{
+    border: purple solid 1px;
+
+    .modells{
+      position: absolute;
+      top: 0; left:0; right: 0; 
+      height: 70%;
+      background-color: #212124;
+      z-index: -1;
+    }
+
+    .showpagephoto{
+      height: 57%;
+      position: absolute;
+      left: 50%; top: 35%;
+      transform: translate(-50%,-50%)
+    }
+  }
+
+  .commentsNfavorites{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+
+    .commentSection{
+      border: 1px solid blue;
+      height: inherit;
+    }
+
+    .favoriteSection{
+      border: 1px solid blue
+    }
+  }
 }

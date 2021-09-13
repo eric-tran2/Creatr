@@ -28,3 +28,4 @@ class FavoriteShow extends React.Component {
 
 
 
+export default FavoriteShow 

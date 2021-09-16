@@ -62,23 +62,23 @@ class Photos extends React.Component{
                 ))}
             </ul>
         )
-//         return (
-//             <>
-//             <form onSubmit={this.handleSubmit.bind(this)}>
+        return (
+            <>
+            <form onSubmit={this.handleSubmit.bind(this)}>
 
-//             <input type="file" 
-//             onChange={this.handleFile.bind(this)}/>
-//             <h3>Image Preview</h3>
-//             {preview}
-//             <button>Submit your creation</button>
-//             </form>
-//             <div className='gridParent'>
-//                 {allPhotos}
-//             </div>
-//             </>
-//         )
-//     }
-// }
+            <input type="file" 
+            onChange={this.handleFile.bind(this)}/>
+            <h3>Image Preview</h3>
+            {preview}
+            <button>Submit your creation</button>
+            </form>
+            <div className='gridParent'>
+                {allPhotos}
+            </div>
+            </>
+        )
+    }
+}
 
 
 

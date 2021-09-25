@@ -17,36 +17,36 @@ class Photos extends React.Component{
         this.props.allPhotos();
     }
 
-    // handleFile(e) {
-    //     const file = e.currentTarget.files[0];
-    //     const fileReader = new FileReader();
-    //     fileReader.onloadend = () => {
-    //         this.setState({photoFile: file, photoUrl: fileReader.result});
-    //     };
-    //     if (file) {
-    //         fileReader.readAsDataURL(file);
-    //     }
-    // }
+    handleFile(e) {
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+            this.setState({photoFile: file, photoUrl: fileReader.result});
+        };
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
+    }
 
 
 
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     const formData = new FormData();
-    //     formData.append('photo[title]', this.state.title)
-    //     formData.append('photo[description]', this.state.description)
-    //     formData.append('photo[photo]', this.state.photoFile);
-    //     $.ajax({
-    //         url: '/api/user/photos',
-    //         method: 'POST',
-    //         data: formData,
-    //         contentType: false,
-    //         processData: false
-    //     }).then(
-    //         (response) => console.log(response.message),
-    //         (response) => console.log(response.responseJSON)
-    //     );
-    // }
+    handleSubmit(e) {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('photo[title]', this.state.title)
+        formData.append('photo[description]', this.state.description)
+        formData.append('photo[photo]', this.state.photoFile);
+        $.ajax({
+            url: '/api/user/photos',
+            method: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false
+        }).then(
+            (response) => console.log(response.message),
+            (response) => console.log(response.responseJSON)
+        );
+    }
     
     render(){
         console.log(this.state);

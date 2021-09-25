@@ -30,23 +30,23 @@ class Photos extends React.Component{
 
 
 
-    handleSubmit(e) {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append('photo[title]', this.state.title)
-        formData.append('photo[description]', this.state.description)
-        formData.append('photo[photo]', this.state.photoFile);
-        $.ajax({
-            url: '/api/user/photos',
-            method: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false
-        }).then(
-            (response) => console.log(response.message),
-            (response) => console.log(response.responseJSON)
-        );
-    }
+    // handleSubmit(e) {
+    //     e.preventDefault();
+    //     const formData = new FormData();
+    //     formData.append('photo[title]', this.state.title)
+    //     formData.append('photo[description]', this.state.description)
+    //     formData.append('photo[photo]', this.state.photoFile);
+    //     $.ajax({
+    //         url: '/api/user/photos',
+    //         method: 'POST',
+    //         data: formData,
+    //         contentType: false,
+    //         processData: false
+    //     }).then(
+    //         (response) => console.log(response.message),
+    //         (response) => console.log(response.responseJSON)
+    //     );
+    // }
     
     render(){
         console.log(this.state);

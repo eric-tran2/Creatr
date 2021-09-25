@@ -17,16 +17,16 @@ class Photos extends React.Component{
         this.props.allPhotos();
     }
 
-    handleFile(e) {
-        const file = e.currentTarget.files[0];
-        const fileReader = new FileReader();
-        fileReader.onloadend = () => {
-            this.setState({photoFile: file, photoUrl: fileReader.result});
-        };
-        if (file) {
-            fileReader.readAsDataURL(file);
-        }
-    }
+    // handleFile(e) {
+    //     const file = e.currentTarget.files[0];
+    //     const fileReader = new FileReader();
+    //     fileReader.onloadend = () => {
+    //         this.setState({photoFile: file, photoUrl: fileReader.result});
+    //     };
+    //     if (file) {
+    //         fileReader.readAsDataURL(file);
+    //     }
+    // }
 
 
 

@@ -18,9 +18,13 @@ class FavoriteShow extends React.Component {
     }
   }
 
+  handleLike() {
+    
+  }
+
   render() {
     return (
-      <button onClick={this.toggleFave} > hello </button>
+      <button onClick={this.toggleFave} > Like </button>
     )
   }
 }

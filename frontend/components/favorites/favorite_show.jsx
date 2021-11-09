@@ -18,8 +18,8 @@ class FavoriteShow extends React.Component {
     }
   }
 
-  handleLike() {
-    
+  handleFavorites() {
+
   }
 
   render() {

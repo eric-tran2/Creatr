@@ -4,23 +4,23 @@ class FavoriteShow extends React.Component {
   constructor(props) {
     super(props)
     this.state= {
-      favorites: this.props.favorites
+      favorites: this.props.favorites,
+      favoriter_id: this.props.favoriterId,
+      photo_id: this.props.photoId,
     }
     this.toggleFave = this.toggleFave.bind(this);
   }
 
+
   toggleFave() {
     const data = { photo_id: this.props.photo_id, favoriter_id: this.props.favoriter_id }
-    if (this.props.favorites) {
-      this.props.deleteFavorite(data);
+    if (this.props.favoriteId) {
+      this.props.deleteFavorite(this.props.favoriteId);
     } else {
       this.props.createFavorite(data);
     }
   }
 
-  handleFavorites() {
-
-  }
 
   render() {
     return (

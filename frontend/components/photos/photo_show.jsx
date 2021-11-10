@@ -9,6 +9,7 @@ class Photo extends React.Component{
   componentDidMount(){
     // debugger
     this.props.requestPhoto(this.props.match.params.photoId)
+    this.props.allFavorites()
   }
 
   render(){

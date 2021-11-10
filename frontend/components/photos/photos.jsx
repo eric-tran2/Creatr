@@ -15,6 +15,7 @@ class Photos extends React.Component{
     }
     componentDidMount(){
         this.props.allPhotos();
+        this.props.allFavorites()
     }
 
     handleFile(e) {

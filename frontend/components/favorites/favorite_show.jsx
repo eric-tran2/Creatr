@@ -25,7 +25,10 @@ class FavoriteShow extends React.Component {
   render() {
     let like = this.props.favoriteId ? "Unlike" : "Like"
     return (
-      <button onClick={this.toggleFave} > {like} </button>
+      <div> 
+        <button onClick={this.toggleFave} > {like} </button>
+        <p>{this.props.allFavoriteCount}</p>
+      </div>
     )
   }
 }

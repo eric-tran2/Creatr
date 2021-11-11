@@ -23,7 +23,7 @@ class Api::CommentsController < ApplicationController
 
   def update
     @comment = current_user.comments.find_by(id: params[:id])
-    if @comment && @comment.update(comments_params)
+    if @comment && @comment.update(comment_params)
       render :show 
     end
   end

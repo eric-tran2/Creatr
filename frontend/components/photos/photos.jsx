@@ -68,6 +68,7 @@ class Photos extends React.Component{
             <form onSubmit={this.handleSubmit.bind(this)}>
 
             <input type="file" 
+            accept="image/*"
             onChange={this.handleFile.bind(this)}/>
             <h3>Image Preview</h3>
             {preview}

@@ -24,7 +24,7 @@ class Photo extends React.Component{
       commentItems = Object.values(this.props.comments).map(comment => {
           {if(!comment) return null;}
           return(
-          <CommentIndexItem key={comment.id} comment={comment}   />
+          <CommentIndexItem key={comment.id} comment={comment} updateComment={this.props.updateComment} deleteComment={this.props.deleteComment}  />
           )}
       )
     } else {

@@ -39,5 +39,5 @@ export const updateComment = comment => dispatch => {
 }
 
 export const deleteComment = commentId => dispatch => {
-  return CommentUtil.destroyComment(commentId).then(() => dispatch(removeComment(commentId)))
+  return CommentUtil.destroyComment(commentId).then(({commentId}) => dispatch(removeComment(commentId)))
 }

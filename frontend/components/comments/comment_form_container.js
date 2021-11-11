@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import { createComment, requestComment, requestComments, deleteComment, updateComment } from '../../actions/comment_actions';
+import { createComment, requestComment, requestComments} from '../../actions/comment_actions';
 import CommentForm from './comment_form';
 
 
@@ -14,6 +14,8 @@ const mapDispatchToProps = dispatch => ({
   createComment: (comment) => dispatch(createComment(comment)),
   requestComment: (comment) => dispatch(requestComment(comment)),
   requestComments: (comments) => dispatch(requestComments(comments)),
+ 
+
 
 })
 

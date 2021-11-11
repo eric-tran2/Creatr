@@ -1,12 +1,15 @@
 import React from 'react';
 
 
-const CommentIndexItem = props => {
-  console.log(props)
+const CommentIndexItem = ({comment, updateComment, deleteComment}) => {
   return (
-    <div>
+    <div className="comment">
       <div>
-        {props.comment.body}
+        {comment.body}
+      </div>
+      <div className="comment-settings">
+        <button>Edit</button>
+        <button onClick={() => deleteComment(comment.id)}>Delete</button>
       </div>
     </div>
   )

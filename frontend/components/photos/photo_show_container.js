@@ -2,6 +2,8 @@ import { connect } from 'react-redux'
 import { requestFavorites } from '../../actions/favorite_actions';
 import { requestPhoto } from '../../actions/photo_actions'
 import Photo from './photo_show'
+import { deleteComment, updateComment } from '../../actions/comment_actions';
+
 
 const mapStateToProps = (state, props) => {
   return {
@@ -15,7 +17,9 @@ const mapStateToProps = (state, props) => {
 // then send off
 const mapDispatchToProps = dispatch => ({
   requestPhoto: (photoId) => dispatch(requestPhoto(photoId)),
-  allFavorites: () => dispatch(requestFavorites())
+  allFavorites: () => dispatch(requestFavorites()),
+  updateComment: (comment) => dispatch(updateComment(comment)),
+  deleteComment: (commentId) => dispatch(deleteComment(commentId)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Photo)

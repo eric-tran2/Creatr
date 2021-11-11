@@ -33,8 +33,9 @@
     height: 30%;
 
     .commentSection{
-      border: 1px solid blue;
       height: inherit;
+      background-color: rgb(245, 245, 245);
+      width: calc(50% - 200px)
     }
 
     .favoriteSection{

@@ -31,7 +31,7 @@ class Api::CommentsController < ApplicationController
   def destroy
     @comment = current_user.comments.find_by(id: params[:id])
     if @comment && @comment.destroy
-        render json: {message: 'Comment successfully deleted'}
+        render json: {commentId: @comment.id}
     else
         render json: {message: 'Unsuccessful in trying to delete comment'}
     end

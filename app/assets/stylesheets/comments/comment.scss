@@ -1,0 +1,15 @@
+.comment { 
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+  > .comment-settings {
+    display: none;
+  }
+  &:hover {
+    background-color: white;
+    > .comment-settings {
+      display: block;
+    }
+  }
+
+}

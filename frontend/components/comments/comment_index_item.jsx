@@ -27,8 +27,12 @@ const CommentIndexItem = ({comment, updateComment, deleteComment}) => {
         {comment.body}
       </div>}
       <div className="comment-settings">
-        <button onClick={() => setEditing(true)}>Edit</button>
-        <button onClick={() => deleteComment(comment.id)}>Delete</button>
+        <button onClick={() => setEditing(true)}>
+          <i class="fa fa-edit"></i>
+        </button>
+        <button onClick={() => deleteComment(comment.id)}>
+          <i class="fa fa-trash"></i>
+        </button>
       </div>
     </div>
   )

@@ -1,1 +1,1 @@
-json.partial! '/api/tags/tag', tag: @tag
+json.extract! tag, :name, :photo_id

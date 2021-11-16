@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import CommentFormContainer from '../comments/comment_form_container'
 import CommentIndexItem from '../comments/comment_index_item'
 import FavoriteShowContainer from '../favorites/favorite_form_container'
+import TagIndexItem from '../tags/tag_index_item'
+import TagFormContainer from '../tags/tag_form_container'
 
 
 class Photo extends React.Component{
@@ -30,6 +32,20 @@ class Photo extends React.Component{
     } else {
       commentItems = null;
     }
+
+    let tagItems
+    if (this.props.tags) {
+      tagItems = Object.values(this.props.tags).map(tag => {
+        { if (!tag) return null; }
+        return (
+          <TagIndexItem key={tag.id} tag={tag}  deleteTag={this.props.deleteTag} />
+        )
+      }
+      )
+    } else {
+      tagItems = null;
+    }
+
     return(
       <div className="imageShow">
         <div className="imageShowContent">
@@ -37,10 +53,14 @@ class Photo extends React.Component{
           <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
         </div>
         <div className="commentsNfavorites">
+            <div className="tagSection">
+            <TagFormContainer idOfPhoto={photo.id} />
+            {tagItems}
+            </div>
             <div className="commentSection">
               <CommentFormContainer idOfPhoto={photo.id}/>
               {commentItems}
-            </div>
+            </div> 
             <div className="favoriteSection">
               <FavoriteShowContainer idOfPhoto={photo.id}/>
             </div>

@@ -5,7 +5,7 @@ class Api::TagsController < ApplicationController
   end
 
   def show 
-    @photos = Tag.find(params[:id])
+    @tag = Tag.find(params[:id])
     render :show
   end
 
@@ -19,8 +19,12 @@ class Api::TagsController < ApplicationController
   end
 
   def destroy
-    @tag = Tag.find_by(id: params[:id])
-    @tag.destroy
+    @tag = current_user.tags.find_by(id: params[:id])
+    if @comment && @comment.destroy
+        render json: {tagId: @tag.id}
+    else
+        render json: {message: 'Unsuccessful in trying to delete tag'}
+    end
   end
 
   private

@@ -26,7 +26,7 @@ export const requestTags = () => dispatch => {
 }
 
 export const requestTag = tagId => dispatch => {
-  return TagUtil.fetchTag(tagId).then(tag => dispatch(receiveComment(tag)))
+  return TagUtil.fetchTag(tagId).then(tag => dispatch(receiveTag(tag)))
 }
 
 export const createTag = tag => dispatch => {
@@ -35,5 +35,5 @@ export const createTag = tag => dispatch => {
 
 
 export const deleteTag = tagId => dispatch => {
-  return TagUtil.destroyTag(tagId).then(({ tagId }) => dispatch(removeTag(tagId)))
+  return TagUtil.destroyTag(tagId).then(({tagId}) => dispatch(removeTag(tagId)))
 }

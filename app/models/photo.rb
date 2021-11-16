@@ -29,5 +29,9 @@ class Photo < ApplicationRecord
     foreign_key: :photo_id,
     class_name: :Favorite
 
+  has_many :tags,
+    foreign_key: :photo_id,
+    class_name: :Tag
+
 
 end

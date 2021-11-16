@@ -10,14 +10,14 @@ class TagForm extends React.Component {
   }
 
   handleInput(e) {
-    this.setState({ body: e.currentTarget.value })
+    this.setState({ name: e.currentTarget.value })
   }
 
   handleSubmit(e) {
     e.preventDefault();
     // console.log(this.state)
     this.props.createTag(this.state)
-    this.setState({ body: "" })
+    this.setState({ name: "" })
   }
 
 

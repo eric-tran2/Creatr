@@ -5,10 +5,12 @@ Rails.application.routes.draw do
       resources :photos, only: [:create]
       resources :comments, only: [:create]
       resources :favorites, only: [:create]
+      resources :tags, only: [:create]
     end
     resources :favorites, only: [:index, :destroy]
     resources :photos, only: [:show, :index, :update, :destroy]
     resources :comments, only: [:show, :index, :update, :destroy]
+    resources :tags, only: [:show, :index, :destroy]
     resource :session, only: [:create, :destroy, :show]
   end
   # resources :photos, only: :show

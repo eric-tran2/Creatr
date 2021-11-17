@@ -2,6 +2,7 @@ import { RECEIVE_ALL_TAGS, RECEIVE_TAG, REMOVE_TAG } from "../actions/tag_action
 import { RECEIVE_PHOTO } from "../actions/photo_actions";
 
 
+
 const tagReducer = (oldState = {}, action) => {
   Object.freeze(oldState)
   let nextState = Object.assign({}, oldState);
@@ -13,10 +14,17 @@ const tagReducer = (oldState = {}, action) => {
       nextState[action.tag.id] = action.tag
       return nextState;
     case RECEIVE_PHOTO:
+      console.log(action.photo)
       if (action.photo.tags) {
-        return action.photo.tags
-      } else {
-        return oldState
+        let photoTags = {}
+        
+        for (let key in action.photo.tags) {
+          let currentTag = action.photo.tags[key]
+          if (currentTag.photo_id === action.photo.photo.id) photoTags[currentTag.id] = currentTag; 
+        }
+        return photoTags
+        } else {
+          return oldState
       }
     case REMOVE_TAG:
       delete nextState[action.tagId]

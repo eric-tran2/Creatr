@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 
 const TagIndexItem = ({ tag, deleteTag }) => {
-  const [body, setBody] = useState(tag.body);
+  // const [name, setName] = useState(tag.name);
 
 
   return (
     <div className="tag">
      
          <div>
-          {tag.body}
+          {tag.name}
         </div>
       <div className="tag-settings">
         <button onClick={() => deleteTag(tag.id)}>

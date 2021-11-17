@@ -14,13 +14,14 @@ class Api::TagsController < ApplicationController
     if @tag.save
       render :show
     else
-      render json: @tag.errors.full_messages
+      render json: {message: 'Hello'}
     end
   end
 
   def destroy
-    @tag = current_user.tags.find_by(id: params[:id])
-    if @comment && @comment.destroy
+    # @tag = current_user.tags.find_by(id: params[:id])
+    @tag = Tag.find_by(id: params[:id])
+    if @tag && @tag.destroy
         render json: {tagId: @tag.id}
     else
         render json: {message: 'Unsuccessful in trying to delete tag'}

@@ -1,1 +1,1 @@
-json.extract! tag, :name, :photo_id
+json.extract! tag, :name, :photo_id, :id

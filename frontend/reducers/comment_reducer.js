@@ -1,6 +1,7 @@
 import { RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT } from "../actions/comment_actions";
 import { RECEIVE_PHOTO } from "../actions/photo_actions";
 
+
 const commentReducer = (oldState = {}, action) => {
   Object.freeze(oldState)
   let nextState = Object.assign({}, oldState);

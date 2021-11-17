@@ -45,7 +45,10 @@ class Photo extends React.Component{
     } else {
       tagItems = null;
     }
-
+    // console.log(tagItems)
+    // console.log(this.props.tags)
+    // console.log(this.props.comments)
+    // console.log(this.props)
     return(
       <div className="imageShow">
         <div className="imageShowContent">

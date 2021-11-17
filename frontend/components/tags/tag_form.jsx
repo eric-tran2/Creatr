@@ -4,7 +4,7 @@ class TagForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = this.props.Tag
+    this.state = this.props.tag
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
   }

@@ -4,10 +4,12 @@ import users from './users_reducer';
 import photos from './photo_reducer';
 import comments from './comment_reducer'
 import favorites from './favorite_reducer'
+import tags from './tag_reducer'
 
 export default combineReducers({
   users,
   photos,
   comments,
   favorites,
+  tags
 });

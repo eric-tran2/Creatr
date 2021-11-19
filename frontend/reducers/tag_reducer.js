@@ -14,7 +14,6 @@ const tagReducer = (oldState = {}, action) => {
       nextState[action.tag.id] = action.tag
       return nextState;
     case RECEIVE_PHOTO:
-      console.log(action.photo)
       if (action.photo.tags) {
         let photoTags = {}
         

@@ -15,7 +15,7 @@ end
 json.tags do
   @photo.tags.each do |tag|
     json.set! tag.id do
-      json.extract! tag, :id, :name, :photo_id, :created_at
+      json.extract! tag, :id, :name, :tagger_id, :photo_id, :created_at
     end
   end
 end

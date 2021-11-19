@@ -50,7 +50,6 @@ class Photos extends React.Component{
     }
     
     render(){
-        console.log(this.state);
         const preview = this.state.photoUrl  ? <img src={this.state.photoUrl} />  : null;
         let cont = this.props.photos;
         if(!cont) return null;

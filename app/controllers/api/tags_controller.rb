@@ -22,8 +22,8 @@ class Api::TagsController < ApplicationController
   end
 
   def destroy
-    @tag = current_user.tags.find_by(id: params[:id])
-    # @tag = Tag.find_by(id: params[:id])
+    # @tag = current_user.tags.find_by(id: params[:id])
+    @tag = Tag.find_by(id: params[:id])
     if @tag && @tag.destroy
         render json: {tagId: @tag.id}
     else
@@ -34,7 +34,7 @@ class Api::TagsController < ApplicationController
   private
 
   def tag_params
-    params.require(:tag).permit(:photo_id, :name)
+    params.require(:tag).permit(:photo_id, :name, :tagger_id)
   end
 
 end

@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 import CommentFormContainer from '../comments/comment_form_container'
 import CommentIndexItem from '../comments/comment_index_item'
 import FavoriteShowContainer from '../favorites/favorite_form_container'
-import TagIndexItem from '../tags/tag_index_item'
 import TagFormContainer from '../tags/tag_form_container'
-
+import TagIndexItem from '../tags/tag_index_item_container'
 
 class Photo extends React.Component{
   componentDidMount(){
@@ -19,7 +18,6 @@ class Photo extends React.Component{
       return null
     }
     const { photo } = this.props;
-    console.log(this.props)
     // const { comments } = this.props.photo;
     let commentItems
     if (this.props.comments){
@@ -45,10 +43,7 @@ class Photo extends React.Component{
     } else {
       tagItems = null;
     }
-    // console.log(tagItems)
-    // console.log(this.props.tags)
-    // console.log(this.props.comments)
-    // console.log(this.props)
+
     return(
       <div className="imageShow">
         <div className="imageShowContent">

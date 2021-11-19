@@ -10,7 +10,7 @@
 #  tagger_id  :integer
 #
 class Tag < ApplicationRecord
-  validates :photo_id, :name, presence: true
+  validates :photo_id, :name, :tagger_id, presence: true, length: {maximum: 20}, uniqueness: true
 
   belongs_to :photo,
     foreign_key: :photo_id,

@@ -1,4 +1,7 @@
 class Api::TagsController < ApplicationController
+
+  before_action :require_logged_in
+
   def index
     @tags = Tag.all
     render :index
@@ -19,8 +22,8 @@ class Api::TagsController < ApplicationController
   end
 
   def destroy
-    # @tag = current_user.tags.find_by(id: params[:id])
-    @tag = Tag.find_by(id: params[:id])
+    @tag = current_user.tags.find_by(id: params[:id])
+    # @tag = Tag.find_by(id: params[:id])
     if @tag && @tag.destroy
         render json: {tagId: @tag.id}
     else

@@ -56,14 +56,14 @@ class Photo extends React.Component{
           <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
         </div>
         <div className="commentsNfavorites">
-            <div className="tagSection">
-            <TagFormContainer idOfPhoto={photo.id} />
-            {tagItems}
             </div>
             <div className="commentSection">
               <CommentFormContainer idOfPhoto={photo.id}/>
               {commentItems}
             </div> 
+            <div className="tagSection">
+            <TagFormContainer idOfPhoto={photo.id} />
+            {tagItems}
             <div className="favoriteSection">
               <FavoriteShowContainer idOfPhoto={photo.id}/>
             </div>

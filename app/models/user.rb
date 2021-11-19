@@ -40,6 +40,10 @@ class User < ApplicationRecord
   has_many :favorited_photos,
     through: :favorites,
     source: :photo
+  
+  has_many :tags,
+    foreign_key: :tagger_id,
+    class_name: :Tag
 
 
   def self.find_by_credentials(email, password)

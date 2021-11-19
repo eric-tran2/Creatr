@@ -4,7 +4,8 @@ import { requestPhoto } from '../../actions/photo_actions'
 import Photo from './photo_show'
 import { deleteComment, updateComment } from '../../actions/comment_actions';
 import { deleteTag } from '../../actions/tag_actions';
-import { deletePhoto } from '../../actions/photo_actions';
+import { deletePhoto, updatePhoto } from '../../actions/photo_actions';
+
 
 
 const mapStateToProps = (state, props) => {
@@ -24,8 +25,8 @@ const mapDispatchToProps = dispatch => ({
   updateComment: (comment) => dispatch(updateComment(comment)),
   deleteComment: (commentId) => dispatch(deleteComment(commentId)),
   deleteTag: (tagId) => dispatch(deleteTag(tagId)),
-  deletePhoto: (photoId) => dispatch(deletePhoto(photoId))
-  
+  deletePhoto: (photoId) => dispatch(deletePhoto(photoId)),
+  updatePhoto: (photo) => dispatch(updatePhoto(photo))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Photo)

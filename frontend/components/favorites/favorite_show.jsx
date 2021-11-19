@@ -23,7 +23,7 @@ class FavoriteShow extends React.Component {
 
 
   render() {
-    let like = this.props.favoriteId ? "Unlike" : "Like"
+    let like = this.props.favoriteId ? <i className="fa fa-star">Unlike</i> : <i className="fa fa-star">Like</i>
     return (
       <div> 
         <button onClick={this.toggleFave} > {like} </button>

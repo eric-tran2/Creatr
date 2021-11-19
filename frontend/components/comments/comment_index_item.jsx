@@ -11,8 +11,7 @@ const CommentIndexItem = ({comment, updateComment, deleteComment, currentUser}) 
     updateComment({body, id: comment.id})
     setEditing(false);
   }
-  // console.log(comment)
-  // console.log(updateComment)
+
   return (
     <div className="comment">
       {editing ? 

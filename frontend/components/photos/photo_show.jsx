@@ -8,34 +8,17 @@ import TagIndexItem from '../tags/tag_index_item_container'
 
 class Photo extends React.Component{
   componentDidMount(){
-    // debugger
     this.props.requestPhoto(this.props.match.params.photoId)
     this.props.allFavorites()
   }
 
-  // photoDelete() {
-  //   return (
-  //     <div>
-  //       <button onClick={() => this.handleSubmit.bind(this)}> Hello
-  //         <i className="fa fa-trash"></i>
-  //       </button>
-  //     </div>
-  //   ) 
-    
-  // }
-
-  // handleSubmit(e) {
-  //   e.preventDefault;
-  //   this.props.deletePhoto(this.props.photo.id).then(() => this.props.history.push(`/explore`));
-  // }
-  
 
   render(){
     if (!this.props.photo) {
       return null
     }
     const { photo } = this.props;
-    // const { comments } = this.props.photo;
+
     let commentItems
     if (this.props.comments){
       commentItems = Object.values(this.props.comments).map(comment => {
@@ -73,14 +56,18 @@ class Photo extends React.Component{
           </div>
           <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
         </div>
+
         {
-        this.props.currentUser.id === photo.author_id 
-        ? 
-        < button onClick={() => this.props.deletePhoto(photo.id)
-        .then(() => this.props.history.push(`/explore`))}>
-          <i className="fa fa-trash"></i>
-          </button > 
-          : ""}
+          this.props.currentUser.id === photo.author_id 
+            ? 
+            < button onClick={() => this.props.deletePhoto(photo.id)
+              .then(() => this.props.history.push(`/explore`))}>
+              <i className="fa fa-trash"></i>
+            </button > 
+            : ""
+        } 
+
+
         <div className="commentsNfavorites">
             </div>
             <div className="commentSection">
@@ -102,3 +89,6 @@ class Photo extends React.Component{
 
 
 export default Photo;
+
+
+   

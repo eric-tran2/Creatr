@@ -37,6 +37,8 @@ class Photos extends React.Component{
         this.setState({ description: e.currentTarget.value })
     }
 
+   
+
 
 
     handleSubmit(e) {

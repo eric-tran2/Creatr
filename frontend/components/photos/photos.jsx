@@ -29,6 +29,14 @@ class Photos extends React.Component{
         }
     }
 
+    handleTitle(e){
+        this.setState({ title: e.currentTarget.value })
+    }
+
+    handleDescription(e){
+        this.setState({ description: e.currentTarget.value })
+    }
+
 
 
     handleSubmit(e) {
@@ -46,7 +54,7 @@ class Photos extends React.Component{
         }).then(
             (response) => console.log(response.message),
             (response) => console.log(response.responseJSON)
-        );
+        ).then(() => { window.location.reload() });
     }
     
     render(){
@@ -65,7 +73,12 @@ class Photos extends React.Component{
         return (
             <>
             <form onSubmit={this.handleSubmit.bind(this)}>
-
+            <input type="text"
+            onChange={this.handleTitle.bind(this)}
+            placeholder="Title"/>
+            <input type="text"
+            onChange={this.handleDescription.bind(this)}
+            placeholder="Description" />
             <input type="file" 
             accept="image/*"
             onChange={this.handleFile.bind(this)}/>

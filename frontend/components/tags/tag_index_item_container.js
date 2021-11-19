@@ -4,7 +4,6 @@ import TagIndexItem from './tag_index_item';
 
 
 const mstp = state => {
-  // console.log(state)
   return ({
     currentUser: state.entities.users[state.session.id]
   })

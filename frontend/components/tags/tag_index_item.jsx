@@ -15,7 +15,7 @@ const TagIndexItem = ({ tag, deleteTag, currentUser }) => {
         {currentUser.id === tag.tagger_id ? 
           <button onClick={() => deleteTag(tag.id)
             .then(() => { window.location.reload() })}>
-              <i className="fa fa-trash"></i></button> 
+              <i className="fa fa-times"></i></button> 
               : 
               ""}
       </div>

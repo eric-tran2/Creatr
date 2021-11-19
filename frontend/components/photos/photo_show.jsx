@@ -13,6 +13,23 @@ class Photo extends React.Component{
     this.props.allFavorites()
   }
 
+  // photoDelete() {
+  //   return (
+  //     <div>
+  //       <button onClick={() => this.handleSubmit.bind(this)}> Hello
+  //         <i className="fa fa-trash"></i>
+  //       </button>
+  //     </div>
+  //   ) 
+    
+  // }
+
+  // handleSubmit(e) {
+  //   e.preventDefault;
+  //   this.props.deletePhoto(this.props.photo.id).then(() => this.props.history.push(`/explore`));
+  // }
+  
+
   render(){
     if (!this.props.photo) {
       return null
@@ -24,7 +41,7 @@ class Photo extends React.Component{
       commentItems = Object.values(this.props.comments).map(comment => {
           {if(!comment) return null;}
           return(
-          <CommentIndexItem key={comment.id} comment={comment} updateComment={this.props.updateComment} deleteComment={this.props.deleteComment}  />
+          <CommentIndexItem currentUser={this.props.currentUser} key={comment.id} comment={comment} updateComment={this.props.updateComment} deleteComment={this.props.deleteComment}  />
           )}
       )
     } else {
@@ -48,8 +65,22 @@ class Photo extends React.Component{
       <div className="imageShow">
         <div className="imageShowContent">
           <div className='modells'></div>
+          <div>
+            {photo.title}
+          </div>
+          <div>
+            {photo.description}
+          </div>
           <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
         </div>
+        {
+        this.props.currentUser.id === photo.author_id 
+        ? 
+        < button onClick={() => this.props.deletePhoto(photo.id)
+        .then(() => this.props.history.push(`/explore`))}>
+          <i className="fa fa-trash"></i>
+          </button > 
+          : ""}
         <div className="commentsNfavorites">
             </div>
             <div className="commentSection">

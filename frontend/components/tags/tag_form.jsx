@@ -30,9 +30,9 @@ class TagForm extends React.Component {
           placeholder='Add a tag'
           onChange={this.handleInput}
         />
-        <input className="tagbutton"
+        <input className="tagButton"
           type='submit'
-          value='Tag' />
+          value='Add tags' />
       </form>
     )
   }

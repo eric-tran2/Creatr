@@ -358,3 +358,15 @@ html, body, #root, #app {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: small;
 }
+
+.photoDeleteButton {
+    color: #128fdc;
+    background: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.photoDeleteButton:hover {
+  color: white;
+  background: #128fdc;
+}

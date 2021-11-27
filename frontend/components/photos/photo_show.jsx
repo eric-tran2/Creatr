@@ -52,6 +52,9 @@ class Photo extends React.Component{
       <div className="imageShow">
         <div className="imageShowContent">
           <div className='modells'></div>
+          <Link to={`/user/${photo.author_id}`}>
+            {this.props.users[photo.author_id].first_name + " " + this.props.users[photo.author_id].last_name }
+          </Link>
           <div>
             {photo.title}
           </div>

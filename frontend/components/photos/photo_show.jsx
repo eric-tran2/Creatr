@@ -15,6 +15,8 @@ class Photo extends React.Component{
   }
 
 
+
+
   render(){
     if (!this.props.photo) {
       return null
@@ -26,7 +28,7 @@ class Photo extends React.Component{
       commentItems = Object.values(this.props.comments).map(comment => {
           {if(!comment) return null;}
           return(
-          <CommentIndexItem currentUser={this.props.currentUser} key={comment.id} comment={comment} updateComment={this.props.updateComment} deleteComment={this.props.deleteComment}  />
+          <CommentIndexItem currentUser={this.props.currentUser} commentUser={this.props.users[comment.commenter_id]} key={comment.id} comment={comment} updateComment={this.props.updateComment} deleteComment={this.props.deleteComment}  />
           )}
       )
     } else {

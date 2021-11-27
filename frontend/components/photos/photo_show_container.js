@@ -15,6 +15,7 @@ const mapStateToProps = (state, props) => {
   comments: state.entities.comments,
   tags: state.entities.tags,
   currentUser: state.entities.users[state.session.id],
+  users: state.entities.users
   // commentUser: 
     // photoUser: state.entities.users[state.photos.author_id]
 }};

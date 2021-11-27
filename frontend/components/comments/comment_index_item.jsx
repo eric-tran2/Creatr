@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-const CommentIndexItem = ({comment, updateComment, deleteComment, currentUser}) => {
+const CommentIndexItem = ({comment, updateComment, deleteComment, currentUser, commentUser}) => {
   
   const [editing, setEditing] = useState(false);
   const [body, setBody] = useState(comment.body);
@@ -11,7 +11,7 @@ const CommentIndexItem = ({comment, updateComment, deleteComment, currentUser}) 
     updateComment({body, id: comment.id})
     setEditing(false);
   }
-
+console.log(currentUser)
   return (
     <div className="comment">
       {editing ? 
@@ -26,7 +26,7 @@ const CommentIndexItem = ({comment, updateComment, deleteComment, currentUser}) 
       </form>
       :  <div>
           <div>
-            {currentUser.first_name + " " + currentUser.last_name}
+            {commentUser.first_name + " " + commentUser.last_name}
            </div>
         
         {comment.body}

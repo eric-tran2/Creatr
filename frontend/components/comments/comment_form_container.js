@@ -4,7 +4,6 @@ import CommentForm from './comment_form';
 
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log("hello")
 return {
   
   comment: {
@@ -19,9 +18,6 @@ const mapDispatchToProps = dispatch => ({
   createComment: (comment) => dispatch(createComment(comment)),
   requestComment: (comment) => dispatch(requestComment(comment)),
   requestComments: (comments) => dispatch(requestComments(comments)),
- 
-
-
 })
 
 

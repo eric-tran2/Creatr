@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:show, :index, :update, :destroy]
     resources :tags, only: [:show, :index, :destroy]
     resource :session, only: [:create, :destroy, :show]
+    resources :users, only: [:index]
   end
   # resources :photos, only: :show
 

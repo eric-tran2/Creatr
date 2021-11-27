@@ -5,6 +5,7 @@ import Photo from './photo_show'
 import { deleteComment, updateComment } from '../../actions/comment_actions';
 import { deleteTag } from '../../actions/tag_actions';
 import { deletePhoto, updatePhoto } from '../../actions/photo_actions';
+import { requestUsers } from '../../actions/user_actions';
 
 
 
@@ -14,7 +15,8 @@ const mapStateToProps = (state, props) => {
   comments: state.entities.comments,
   tags: state.entities.tags,
   currentUser: state.entities.users[state.session.id],
-  // photoUser: state.entities.users[state.photos.author_id]
+  // commentUser: 
+    // photoUser: state.entities.users[state.photos.author_id]
 }};
 //setup
 
@@ -26,7 +28,8 @@ const mapDispatchToProps = dispatch => ({
   deleteComment: (commentId) => dispatch(deleteComment(commentId)),
   deleteTag: (tagId) => dispatch(deleteTag(tagId)),
   deletePhoto: (photoId) => dispatch(deletePhoto(photoId)),
-  updatePhoto: (photo) => dispatch(updatePhoto(photo))
+  updatePhoto: (photo) => dispatch(updatePhoto(photo)),
+  allUsers: () => dispatch(requestUsers())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Photo)

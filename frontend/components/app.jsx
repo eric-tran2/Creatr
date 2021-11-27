@@ -18,6 +18,7 @@ import SplashMessage from './splash_page/splash_page';
 import Footer from './footer/footer';
 import PhotoShowContainer from './photos/photo_show_container'
 import UserShow from './users/user_container';
+import PhotoUploadContainer from './photos/photo_upload_container'
 
 
 
@@ -35,7 +36,7 @@ const App = () => (
     </Switch>
     <ProtectedRoute exact path="/photos/:photoId" component={PhotoShowContainer} />
     <ProtectedRoute exact path="/explore" component={PhotoContainer}/>
-    {/* <ProtectedRoute exact pact="/upload" component={PhotoShowContainer} /> */}
+    <ProtectedRoute exact path="/upload" component={PhotoUploadContainer} />
     <ProtectedRoute exact path="/user/:userId" component={UserShow} />
     {/* <ProtectedRoute exact path="/photos/:photo_id" component={PhotoShowContainer}/> */}
     {/* <Switch>

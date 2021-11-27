@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React,  { useState} from 'react';
+import { Link } from 'react-router-dom';
 
 
 const CommentIndexItem = ({comment, updateComment, deleteComment, currentUser, commentUser}) => {
@@ -11,7 +12,7 @@ const CommentIndexItem = ({comment, updateComment, deleteComment, currentUser, c
     updateComment({body, id: comment.id})
     setEditing(false);
   }
-console.log(currentUser)
+console.log(commentUser)
   return (
     <div className="comment">
       {editing ? 
@@ -25,9 +26,9 @@ console.log(currentUser)
           <button onClick={handleUpdate}>Done</button>
       </form>
       :  <div>
-          <div>
+          <Link to={`/user/${commentUser.id}`}>
             {commentUser.first_name + " " + commentUser.last_name}
-           </div>
+           </Link>
         
         {comment.body}
       </div>}

@@ -26,7 +26,7 @@ const Navbar = ({ currentUser, logout }) => {
     <hgroup className="nav-bar" id="personalGreeting">
       <div>
         <Link to='/explore'><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_inversed.png" alt="logo is broken" className="logo" /></Link>
-        <Link to={`user/${currentUser.id}`} className="youButton">You</Link>
+        <Link to={`/user/${currentUser.id}`} className="youButton">You</Link>
         <Link to='/explore' className="exploreButton">Explore</Link>
         <Link to='/upload' className="uploadButton">Upload</Link>
       </div>

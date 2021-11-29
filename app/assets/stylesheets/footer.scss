@@ -1,0 +1,12 @@
+.bottomfooter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 32.5px;
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  background-color: black;
+  z-index: 1;
+}

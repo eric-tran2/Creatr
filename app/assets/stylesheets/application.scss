@@ -34,58 +34,10 @@ html, body, #root, #app {
 //   z-index: -1000;
 // }
 
-.nav-bar {
-  display: flex;
-  background-color: rgba(0,0,0,.2);
-  height: 55px;
-  justify-content: space-between;
-  position: relative;
-  z-index: 1;
-}
-
-.logo { 
-  height: 55px;
-  flex: 1;
-}
 
 // .login-form-box {
 //   background-color:white;
 // }
-
-.login-signup {
-  // display: flex;
-  // justify-content: flex-end;
-  // flex: 1;
-  // font-size: medium;
-  // align-items: center;
-  margin-top: 20px;
-}
-
-.loginbutton {
-  text-decoration: none;
-  font-size: 15px;
-  font-family: $montserrat;
-  font-weight: 1;
-  color: white;
-}
-
-.signupbutton {
-  text-decoration: none;
-  background-color: white;
-  color: black;
-  font-family: $montserrat;
-  font-size: 15px;
-  font-weight: 1;
-  background-color: white;
-  border-radius: 4%;
-  padding: 7px;
-  transition-duration: 0.3s;
-  margin-right: 20px;
-}
-
-.signupbutton:hover {
-  color: gray;
-}
 
 .header-group {
   background-color: rgba(0,0,0,.2);
@@ -148,8 +100,6 @@ html, body, #root, #app {
 
 .splashMsg {
   font-family: $montserrat;
-  // background: url("https://creatr-seed.s3.amazonaws.com/splash_background8.jpg") no-repeat center center;
-  // background-size: cover;
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   color: white;
@@ -289,7 +239,6 @@ html, body, #root, #app {
   justify-content: space-evenly;
   color: gray;
   background-color: #212720;
-  // position: relative;
   z-index: 1;
 }
 

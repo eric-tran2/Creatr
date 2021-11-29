@@ -1,0 +1,53 @@
+.splashMsg {
+  font-family: $montserrat;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  padding: 21% 21% 21%;
+  >img {
+    position: absolute;
+    top: 0; left: 0; right: 0; 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    overflow: hidden;
+  }
+}
+
+.splashMsg1 {
+  font-size: 70px;
+  // overflow: hidden; // cut off my text
+  max-width: 0rem;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: 
+   slow 3s ease forwards,
+   fadeIn 5s,
+   typing 4s steps(40, end),
+   blink-caret .75s step-end infinite;
+}
+
+@keyframes slow {
+  from {
+    max-width: 0rem;
+  }
+  to { 
+    max-width: 100rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.splashMsg2 {
+  font-size: 30px;
+}

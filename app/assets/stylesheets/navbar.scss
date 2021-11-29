@@ -43,21 +43,3 @@
   color: gray;
 }
 
-.splashMsg {
-  font-family: $montserrat;
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  color: white;
-  justify-content: center;
-  text-align: center;
-  padding: 21% 21% 21%;
-  >img {
-    position: absolute;
-    top: 0; left: 0; right: 0; 
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-    overflow: hidden;
-  }
-}

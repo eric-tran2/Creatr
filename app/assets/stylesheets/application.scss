@@ -44,28 +44,7 @@ html, body, #root, #app {
   height: 55px;
   font-size: x-large;
 }
-.login-form-container {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  height: 100%;
-  background: url("https://creatr-seed.s3.amazonaws.com/splash_background8.jpg") no-repeat center center;
-  // z-index: -1;
-}
-.login-form-container>div{
-  
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-49%, -49%);
-  font-family: $montserrat;
-  border-radius: 4%;
-  padding: 50px 20px 20px;
-  // background-color: rgba(0,0,0,.3);
-}
+
 
 
 .header-name {
@@ -176,29 +155,7 @@ html, body, #root, #app {
 //   height: 100px;
 // }
 
-.login-input {
-    border: .5px solid gray;
-    display: block;
-    padding: 20px;
-    width: 260px;
 
-}
-
-.formLogo{
-  margin-left: 90px;
-}
-
-.login-form {
-  text-align: center;
-  font-family: $montserrat;
-  font-size: 15px;
-}
-
-.errorMsg {
-  color: red;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: small;
-}
 
 .photoDeleteButton {
     color: #128fdc;

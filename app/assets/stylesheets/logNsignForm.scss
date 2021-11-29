@@ -6,7 +6,6 @@
   font-size: 20px;
   font-weight: bolder;
   text-decoration: none;
-  // border: 2px solid black;
   background-color: white;
   border-radius: 4%;
   padding: 20px;
@@ -33,6 +32,8 @@
   background-color: #0e77b8;
 }
 
+
+
 .guestbutton {
   color:white;
   background-color:#128fdc;
@@ -48,3 +49,55 @@
 .guestbutton:hover {
   background-color: #0e77b8;
 }
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    margin-bottom: 8px;
+    border: .5px solid gray;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.formLogo{
+  margin-left: 90px;
+}
+
+.login-form {
+  text-align: center;
+  font-family: $montserrat;
+  font-size: 15px;
+}
+
+.errorMsg {
+  color: red;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: small;
+}
+
+.login-form-container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  height: 100%;
+  background: url("https://creatr-seed.s3.amazonaws.com/splash_background8.jpg") no-repeat center center;
+  // z-index: -1;
+}
+.login-form-container>div{
+  
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-49%, -49%);
+  font-family: $montserrat;
+  border-radius: 4%;
+  padding: 50px 20px 20px;
+  // background-color: rgba(0,0,0,.3);
+}
+

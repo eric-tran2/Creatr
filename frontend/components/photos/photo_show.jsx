@@ -67,12 +67,15 @@ class Photo extends React.Component{
         {
           this.props.currentUser.id === photo.author_id 
             ? 
+          <>
+            <Link to={`/photos/${photo.id}/edit`}>Edit</Link>
             <button onClick={() => this.props.deletePhoto(photo.id)
               .then(() => this.props.history.push(`/explore`))}>
                 <div className="photoDeleteButton">
               <i className="fa fa-trash"></i>
                 </div>
             </button > 
+          </>
             : ""
         } 
 

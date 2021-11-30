@@ -24,7 +24,7 @@ class Api::PhotosController < ApplicationController
 
   def update
     @photo = Photo.find_by(id: params[:id])
-     if @photo && @photo.update(photo_params)
+     if @photo && @photo.update_attributes(photo_params.select { |key, value| key != "photo" &&  value != "null" })
       render :show
     else
       render json: @photo.errors.full_messages

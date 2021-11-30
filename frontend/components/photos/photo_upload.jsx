@@ -4,16 +4,34 @@ import { Link } from 'react-router-dom'
 class PhotoUpload extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.history)
+    // console.log(this.props.history)
     this.state = {
       photoFile: null,
       title: "No title",
       description: "No description",
       photoUrl: null, // image url before it gets uploaded
+      loading: !!props.photoId && !props.photos[props.photoId]
       
     }
     // this.handleSubmit = this.handleSubmit.bind(this)
   }
+  
+  componentDidMount(){
+    if (this.state.loading) {
+      this.props.requestPhoto(this.props.photoId).then(
+        () => this.setState({loading: false})
+      );
+    } 
+  }
+
+  componentDidUpdate() {
+    if (!this.props.photoId) return;
+
+    const photo = this.props.photos[this.props.photoId];
+    if (photo && photo.author_id !== this.props.currentUserId) this.props.history.push("/explore");
+  }
+
+
 
 
   handleFile(e) {
@@ -37,14 +55,23 @@ class PhotoUpload extends React.Component {
 
 
 
-
-
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
     formData.append('photo[title]', this.state.title)
     formData.append('photo[description]', this.state.description)
-    formData.append('photo[photo]', this.state.photoFile);
+    if (this.props.photoId) {
+      formData.append('photo[photo]', this.state.photoFile);
+      $.ajax({
+        url: `/api/photos/${this.props.photoId}`,
+        method: 'PATCH',
+        data: formData,
+        contentType: false,
+        processData: false})
+        .then(() => this.props.history.push(`/photos/${this.props.photoId}`))
+    }
+    else 
+    {formData.append('photo[photo]', this.state.photoFile);
     $.ajax({
       url: '/api/user/photos',
       method: 'POST',
@@ -55,17 +82,19 @@ class PhotoUpload extends React.Component {
     // .then(
     //   (response) => console.log(response.message),
     //   (response) => console.log(response.responseJSON))
-      .then(() => this.props.history.push(`/explore`)) ;
+      .then(() => this.props.history.push(`/explore`))} ;
   }
 
   render() {
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
-
+    if (this.state.loading) {
+      return null
+    }
     return (
       <>
       <div className="uploadForm">
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <button>Submit your creation</button>
+            <button>{this.props.photoId ? "Update photo" : "Submit your creation"}</button>
             <br />
             <input type="text"
               onChange={this.handleTitle.bind(this)}
@@ -78,14 +107,26 @@ class PhotoUpload extends React.Component {
               onChange={this.handleDescription.bind(this)}
               placeholder="Description" 
               className="uploadDescription"/>
-            <input type="file"
-              accept="image/*"
-              id="file"
-              onChange={this.handleFile.bind(this)}
-              />
-            <label htmlFor="file">Choose photos to upload</label>
-            <div className="submitUploadButton">
-            </div>
+
+
+          {  
+              this.props.photoId ? <img src={this.props.photos[this.props.photoId].picture_url} /> :
+            <>
+              <input type="file"
+                accept="image/*"
+                id="file"
+                onChange={this.handleFile.bind(this)}
+                />
+              <label htmlFor="file">Choose photos to upload</label>
+              <div className="submitUploadButton">
+              </div>
+            </> 
+            }
+            
+            
+            
+            
+            
             <div>
             {preview}
             </div>

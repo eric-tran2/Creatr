@@ -46,19 +46,6 @@ html, body, #root, #app {
 }
 
 
-
-.header-name {
-  font-family: $montserrat;
-  // font-size: 30px;
-  color: white;
-}
-
-.logout-button {
-  align-items: flex-end;
-  font-family: $montserrat;
-  font-size: medium;
-}
-
 .gridParent {
   display: block;
 }
@@ -75,43 +62,6 @@ html, body, #root, #app {
   width: 100%;
   margin-top: 30px;
 }
-
-
-
-// .searchbar {
-//   width: 800px;
-//   height: 25px;
-//   text-align: center;
-//   margin-top: 11px;
-// }
-
-
-
-.exploreButton {
-  font-family: $montserrat;
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  margin-bottom: 5%;
-
-}
-
-.uploadButton {
-  font-family: $montserrat;
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  margin-bottom: 5%;
-}
-
-.youButton {
-  font-family: $montserrat;
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  margin-bottom: 5%;
-}
-
 
 .commentSection{
   position: absolute;

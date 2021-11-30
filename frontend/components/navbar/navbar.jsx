@@ -13,7 +13,7 @@ const Navbar = ({ currentUser, logout }) => {
         
       </div>
       <div>
-        <input type="text"placeholder="🔎 Photos 📷 "className="searchbar"/></div>
+        <input type="text"placeholder="Search"className="searchbar"/></div>
       <div className="login-signup">
           <a href="#/login" className="loginbutton">Log In</a>
           &nbsp;   &nbsp;
@@ -24,16 +24,28 @@ const Navbar = ({ currentUser, logout }) => {
   );
   const personalGreetingBar = () => (
     <hgroup className="nav-bar" id="personalGreetingBar">
-      <div>
         <Link to='/explore'><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_inversed.png" alt="logo is broken" className="logo" /></Link>
-        <Link to={`/user/${currentUser.id}`} className="youButton">You</Link>
-        <Link to='/explore' className="exploreButton">Explore</Link>
-        <Link to='/upload' className="uploadButton">Upload</Link>
+
+        <Link to={`/user/${currentUser.id}`} className="youButton">
+          <i className="fa fa-user"></i>
+        </Link>
+
+        <Link to='/explore' className="exploreButton">
+          <i className="fa fa-search"></i>
+        </Link>
+
+      {/* <input type="text"placeholder="Search"className="searchbar"/> */}
+      
+        <Link to='/upload' className="uploadButton">
+            <i className="fa fa-cloud-upload"></i>
+        </Link>
+      
+      <div className="header-name">
+        <span>Hi, {currentUser.first_name}!</span>
       </div>
-      <input type="text"placeholder="🔎 Photos 📷 "className="searchbar"/>
-      <div>
-        <h2 className="header-name">Hi, {currentUser.first_name}!</h2>
-        <button className="logout-button" onClick={logout}>Log Out</button>
+    
+      <div className="logout-div">
+        <a className="logout-button" onClick={logout}>Log Out</a>
       </div>
     </hgroup>
   );

@@ -1,0 +1,19 @@
+@import "variables/fonts";
+
+input[type="file"] {
+  display: none;
+}
+label {
+  color: white;
+  font-family: $montserrat;
+  position: absolute;
+  color:white;
+  background-color:#128fdc;
+  font-family: $montserrat;
+  border-radius: 4%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  left: 46%; top: 45%;
+
+}

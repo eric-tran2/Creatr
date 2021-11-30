@@ -8,12 +8,22 @@ label {
   font-family: $montserrat;
   position: absolute;
   color:white;
-  background-color:#128fdc;
+  background: #0063dc;
   font-family: $montserrat;
   border-radius: 4%;
   padding: 10px;
   display: flex;
   justify-content: center;
   left: 46%; top: 45%;
+  cursor: pointer;
+}
+
+.uploadTitle {
+  font-family: $montserrat;
+
+}
+
+.uploadDescription {
+  font-family: $montserrat;
 
 }

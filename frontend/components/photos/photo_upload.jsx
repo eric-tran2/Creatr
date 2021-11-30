@@ -65,12 +65,19 @@ class PhotoUpload extends React.Component {
       <>
       <div className="uploadForm">
           <form onSubmit={this.handleSubmit.bind(this)}>
+            <button>Submit your creation</button>
+            <br />
             <input type="text"
               onChange={this.handleTitle.bind(this)}
-              placeholder="Title" />
+              placeholder="Title" 
+              className="uploadTitle"/>
+            <br/>
+            <br/>
+            <br/>
             <input type="text"
               onChange={this.handleDescription.bind(this)}
-              placeholder="Description" />
+              placeholder="Description" 
+              className="uploadDescription"/>
             <input type="file"
               accept="image/*"
               id="file"
@@ -78,7 +85,6 @@ class PhotoUpload extends React.Component {
               />
             <label htmlFor="file">Choose photos to upload</label>
             <div className="submitUploadButton">
-            <button>Submit your creation</button>
             </div>
             <div>
             {preview}

@@ -63,27 +63,10 @@ html, body, #root, #app {
   margin-top: 30px;
 }
 
-.commentSection{
-  position: absolute;
-  top: 70%;
-  padding: 100px;
-  height: 500px;
-}
+
 
 // .testing {
 //   height: 100px;
 // }
 
 
-
-.photoDeleteButton {
-    color: #128fdc;
-    background: white;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-.photoDeleteButton:hover {
-  color: white;
-  background: #128fdc;
-}

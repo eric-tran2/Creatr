@@ -1,44 +1,84 @@
-// .imageShow{
-//   overflow-y: scroll;
-//   position: absolute;
-//   top: 0; left:0; right: 0; bottom: 0;
-//   border: 1px yellow solid;
+.imageShow{
+  overflow-y: scroll;
+  position: absolute;
+  top: 0; left:0; right: 0; bottom: 0;
+  border: 1px yellow solid;
+  background-color: rgb(245, 245, 245);
 
 
-//   .imageShowContent{
-//     border: purple solid 1px;
+  .imageShowContent{
+    border: purple solid 1px;
 
-//     .modells{
-//       position: absolute;
-//       top: 0; left:0; right: 0; 
-//       height: 70%;
-//       background-color: #212124f1;
-//       z-index: -1;
-//     }
+    .modells{
+      position: absolute;
+      top: 55px; left:0; right: 0; 
+      height: calc(70% - 55px);
+      background-color: #212124f1;
+    }
 
-//     .showpagephoto{
-//       height: 57%;
-//       position: absolute;
-//       left: 50%; top: 35%;
-//       transform: translate(-50%,-50%)
-//     }
-//   }
+    .showpagephoto{
+      // height: 57%;
+      max-width: 90vw;
+      max-height: 90%;
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%,-50%);
 
-//   .commentsNfavorites{
-//     border: 1px solid red;
-//     display: flex;
-//     flex-direction: row;
-//     height: 30%;
+    }
+  }
 
-//     .commentSection{
-//       height: inherit;
-//       background-color: rgb(245, 245, 245);
-//       width: calc(50% - 200px)
-//     }
+    .photoDeleteButton {
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 7px;    
+    }
 
-//     .favoriteSection{
-//       border: 1px solid rgb(0, 255, 149);
-//       z-index: 2;
-//     }
-//   }
-// }
+
+    .editPhoto {
+      position: absolute;
+      bottom: 5px; right: 5px;
+      display: flex;
+      align-items: center;
+
+      a {
+        margin-bottom: -6.5px;
+        color: white;
+        text-decoration: none;
+        padding: 7px;    
+      }
+    }
+
+     .editPhoto > *:hover {
+      color: rgb(192, 192, 192);
+    }
+
+  .commentsNfavorites{
+    position: absolute;
+    top: 70%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+    width: 90%;
+    left: 50%; 
+    transform: translateX(-50%);
+    >* {
+      width: 45%;
+    }
+
+    .commentSection{
+      // height: inherit;
+      // width: calc(50% - 200px)
+    }
+    // .commentSection{
+    //   padding: 100px;
+    //   height: 500px;
+    // }
+
+    .favoriteSection{
+      border: 1px solid rgb(0, 255, 149);
+      z-index: 2;
+    }
+  }
+}

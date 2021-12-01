@@ -7,18 +7,20 @@ import TagFormContainer from '../tags/tag_form_container'
 import TagIndexItem from '../tags/tag_index_item_container'
 
 class Photo extends React.Component{
+  constructor(props) {
+    super(props)
+    this.state = {loading: true}
+  }
   componentDidMount(){
     this.props.requestPhoto(this.props.match.params.photoId)
     this.props.allFavorites()
-    this.props.allUsers()
+    this.props.allUsers().then(()=> this.setState({loading: false}))
     // console.log(this.props.comments)
   }
 
 
-
-
   render(){
-    if (!this.props.photo) {
+    if (!this.props.photo || this.state.loading) {
       return null
     }
     const { photo } = this.props;
@@ -51,47 +53,46 @@ class Photo extends React.Component{
     return(
       <div className="imageShow">
         <div className="imageShowContent">
-          <div className='modells'></div>
-          <Link to={`/user/${photo.author_id}`}>
-            {this.props.users[photo.author_id].first_name + " " + this.props.users[photo.author_id].last_name }
-          </Link>
-          <div>
-            {photo.title}
+          
+          <div className='modells'>
+            <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
+              {
+                this.props.currentUser.id === photo.author_id 
+                ? 
+                <div className="editPhoto">
+                  <Link to={`/photos/${photo.id}/edit`}><i className="fa fa-edit fa-2x"></i></Link>
+                  <button className="photoDeleteButton" onClick={() => this.props.deletePhoto(photo.id)
+                    .then(() => this.props.history.push(`/explore`))}>
+                    <i className="fa fa-trash fa-2x"></i>
+                  </button > 
+                </div>
+                  : ""
+                } 
           </div>
-          <div>
-            {photo.description}
-          </div>
-          <img src={photo.picture_url} alt="img of something but now broke" className='showpagephoto' key={photo.id}/>
+
+
         </div>
 
-        {
-          this.props.currentUser.id === photo.author_id 
-            ? 
-          <>
-            <Link to={`/photos/${photo.id}/edit`}>Edit</Link>
-            <button onClick={() => this.props.deletePhoto(photo.id)
-              .then(() => this.props.history.push(`/explore`))}>
-                <div className="photoDeleteButton">
-              <i className="fa fa-trash"></i>
-                </div>
-            </button > 
-          </>
-            : ""
-        } 
 
 
         <div className="commentsNfavorites">
-            </div>
-            <div className="commentSection">
+          <div className="commentSection">
+                <Link to={`/user/${photo.author_id}`}>
+                  {this.props.users[photo.author_id].first_name + " " + this.props.users[photo.author_id].last_name }
+                </Link>
+      
+                <div>{photo.title}</div>
+                <div>{photo.description}</div>
               <CommentFormContainer idOfPhoto={photo.id}/>
               {commentItems}
-            </div> 
+           </div> 
+          <div className="favoritesNTags">
             <div className="tagSection">
-            <TagFormContainer idOfPhoto={photo.id} />
-            {tagItems}
-            <div className="favoriteSection">
-              <FavoriteShowContainer idOfPhoto={photo.id}/>
+              <TagFormContainer idOfPhoto={photo.id} />
+              {tagItems}
             </div>
+                <FavoriteShowContainer idOfPhoto={photo.id}/>
+          </div>
         </div>
       </div>
       

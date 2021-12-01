@@ -86,7 +86,7 @@ class PhotoUpload extends React.Component {
   }
 
   render() {
-    const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+    const preview = this.state.photoUrl ? <img id="upload-preview" src={this.state.photoUrl} /> : null;
     if (this.state.loading) {
       return null
     }
@@ -94,7 +94,9 @@ class PhotoUpload extends React.Component {
       <>
       <div className="uploadForm">
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <button>{this.props.photoId ? "Update photo" : "Submit your creation"}</button>
+        { this.state.photoUrl || this.props.photoId ? 
+        <>
+        <button>{this.props.photoId ? "Update photo" : "Submit your creation"}</button>
             <br />
             <input type="text"
               onChange={this.handleTitle.bind(this)}
@@ -106,8 +108,7 @@ class PhotoUpload extends React.Component {
             <input type="text"
               onChange={this.handleDescription.bind(this)}
               placeholder="Description" 
-              className="uploadDescription"/>
-
+              className="uploadDescription"/></> : null}
 
           {  
               this.props.photoId ? <img src={this.props.photos[this.props.photoId].picture_url} /> :
@@ -123,19 +124,15 @@ class PhotoUpload extends React.Component {
             </> 
             }
             
-            
-            
-            
-            
-            <div>
             {preview}
-            </div>
           </form>
         </div>
       </>
     )
   }
 }
+
+        // <button>{this.props.photoId ? "Update photo" : "Submit your creation"}</button>
 
 
 

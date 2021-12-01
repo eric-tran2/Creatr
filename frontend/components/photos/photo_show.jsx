@@ -80,9 +80,9 @@ class Photo extends React.Component{
                 <Link to={`/user/${photo.author_id}`}>
                   {this.props.users[photo.author_id].first_name + " " + this.props.users[photo.author_id].last_name }
                 </Link>
-      
                 <div>{photo.title}</div>
                 <div>{photo.description}</div>
+              <hr/>
               {commentItems}
               <CommentFormContainer idOfPhoto={photo.id}/>
            </div> 

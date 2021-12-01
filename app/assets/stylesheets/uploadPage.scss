@@ -27,3 +27,11 @@ label {
   font-family: $montserrat;
 
 }
+
+#upload-preview {
+  max-height: 80%;
+  position: absolute;
+  top: 50%; left: calc(50% + 106px);
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 212px);
+}

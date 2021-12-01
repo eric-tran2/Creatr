@@ -69,6 +69,10 @@
 
     .commentSection{
       padding: 25px;
+      hr {
+        width: calc(100% - 50px);
+        margin: 10px 0px;
+      }
       textarea{
         width: calc(100% - 50px);
         margin-top: 5px;
@@ -79,9 +83,12 @@
       }
     }
 
+    .favoritesNTags {
+      padding: 25px;
+    }
+
     .favoriteSection{
       border: 1px solid rgb(0, 255, 149);
-      z-index: 2;
-    }
+      }
   }
 }

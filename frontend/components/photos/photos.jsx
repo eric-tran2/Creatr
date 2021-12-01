@@ -16,7 +16,7 @@ class Photos extends React.Component{
         if(!cont) return null;
         const allPhotos = (
             <ul className='gridPhotos'>
-                {cont.map(photo => (
+                {cont.reverse().map(photo => (
                     <Link key={photo.id}  to={`/photos/${photo.id}`}> 
                         <img src={photo.picture_url} alt="img of something but now broke" className='explorePhotos'  />
                     </Link>

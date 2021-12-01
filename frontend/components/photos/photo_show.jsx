@@ -83,15 +83,15 @@ class Photo extends React.Component{
       
                 <div>{photo.title}</div>
                 <div>{photo.description}</div>
-              <CommentFormContainer idOfPhoto={photo.id}/>
               {commentItems}
+              <CommentFormContainer idOfPhoto={photo.id}/>
            </div> 
           <div className="favoritesNTags">
+                <FavoriteShowContainer idOfPhoto={photo.id}/>
             <div className="tagSection">
               <TagFormContainer idOfPhoto={photo.id} />
               {tagItems}
             </div>
-                <FavoriteShowContainer idOfPhoto={photo.id}/>
           </div>
         </div>
       </div>

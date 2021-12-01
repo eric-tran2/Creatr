@@ -60,7 +60,7 @@
     display: flex;
     justify-content: space-between;
     height: 30%;
-    width: 90%;
+    width: min(90% , 1500px);
     left: 50%; 
     transform: translateX(-50%);
     >* {
@@ -68,13 +68,16 @@
     }
 
     .commentSection{
-      // height: inherit;
-      // width: calc(50% - 200px)
+      padding: 25px;
+      textarea{
+        width: calc(100% - 50px);
+        margin-top: 5px;
+        resize: none;
+          &#commentForm {
+            margin-top: 20px;
+          }
+      }
     }
-    // .commentSection{
-    //   padding: 100px;
-    //   height: 500px;
-    // }
 
     .favoriteSection{
       border: 1px solid rgb(0, 255, 149);

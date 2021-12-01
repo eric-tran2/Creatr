@@ -17,6 +17,8 @@ class TagForm extends React.Component {
     e.preventDefault();
     this.props.createTag(this.state)
     this.setState({ name: "" })
+    document.getElementById("tagForm").value = ''
+
   }
 
 
@@ -27,10 +29,12 @@ class TagForm extends React.Component {
         <textarea type='text'
           cols="10"
           rows="1"
+          id="tagForm"
           placeholder='Add a tag'
           onChange={this.handleInput}
         />
         <input className="tagButton"
+          disabled={this.state.name.length ? null : "disabled"}
           type='submit'
           value='Add tags' />
       </form>

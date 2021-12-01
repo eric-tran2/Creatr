@@ -14,7 +14,21 @@ const CommentIndexItem = ({comment, updateComment, deleteComment, currentUser, c
   }
 console.log(commentUser)
   return (
-    <div className="comment">
+      <div className="comment">
+        <div>
+          <Link to={`/user/${commentUser.id}`}>
+            {commentUser.first_name + " " + commentUser.last_name}
+           </Link>
+      <div className="comment-settings">
+        {currentUser.id === comment.commenter_id ? 
+        <>
+          <button onClick={() => setEditing(true)}><i className="fa fa-edit"></i></button>
+          <button onClick={() => deleteComment(comment.id)}> <i className="fa fa-trash"></i></button>
+        </>
+        : 
+        ""}
+      </div>
+    </div>
       {editing ? 
       <form>
           <textarea type='text'
@@ -25,25 +39,9 @@ console.log(commentUser)
           />
           <button onClick={handleUpdate}>Done</button>
       </form>
-      :  <div>
-          <Link to={`/user/${commentUser.id}`}>
-            {commentUser.first_name + " " + commentUser.last_name}
-           </Link>
-        
+      :  <p>
         {comment.body}
-      </div>}
-      <div className="comment-settings">
-        {currentUser.id === comment.commenter_id ? 
-        <button onClick={() => setEditing(true)}><i className="fa fa-edit"></i></button>
-        : 
-        ""}
-      </div>
-      <div className="comment-settings">
-        {currentUser.id === comment.commenter_id ?
-          < button onClick={() => deleteComment(comment.id)}> <i className="fa fa-trash"></i></button >
-          :
-          ""}
-      </div>
+      </p>}
     </div>
   )
 }

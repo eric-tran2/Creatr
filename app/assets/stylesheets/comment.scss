@@ -1,13 +1,21 @@
 .comment { 
+  width: calc(100% - 1rem - 50px);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: .5rem;
-  > .comment-settings {
-    display: none;
+  >div{
+    display: flex;
+    justify-content: space-between;
+    > .comment-settings {
+      display: none;
+      button:last-child {
+        margin-left: 5px;
+      }
+    }
   }
   &:hover {
     background-color: white;
-    > .comment-settings {
+    .comment-settings {
       display: block;
     }
   }

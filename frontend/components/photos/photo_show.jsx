@@ -88,8 +88,10 @@ class Photo extends React.Component{
            </div> 
           <div className="favoritesNTags">
                 <FavoriteShowContainer idOfPhoto={photo.id}/>
+              <hr/>
             <div className="tagSection">
               <TagFormContainer idOfPhoto={photo.id} />
+              <hr/>
               {tagItems}
             </div>
           </div>

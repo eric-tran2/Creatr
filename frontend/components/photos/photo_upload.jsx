@@ -123,7 +123,6 @@ class PhotoUpload extends React.Component {
               </div>
             </> 
             }
-            
             {preview}
           </form>
         </div>

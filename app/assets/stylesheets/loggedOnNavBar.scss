@@ -2,34 +2,39 @@
 
 
 .exploreButton {
-  width: 25%;
-  min-width: 250px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   color: white;
   text-decoration: none;
+  padding: 0;
+  &:hover{
+    color: gray;
+  }
 }
 
+
 .uploadButton {
-  width: 25%;
-  min-width: 250px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   color: white;
   text-decoration: none;
+  &:hover{
+    color: gray;
+  }
 }
 
 
 .youButton {
-  width: 25%;
-  min-width: 250px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   color: white;
   text-decoration: none;
+  &:hover{
+    color: gray;
+  }
 }
 
 #personalGreetingBar {

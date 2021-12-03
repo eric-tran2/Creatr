@@ -22,8 +22,8 @@ console.log(commentUser)
       <div className="comment-settings">
         {currentUser.id === comment.commenter_id ? 
         <>
-          <span className="comment-buttons" onClick={() => setEditing(true)}><i className="fa fa-edit"></i></span>
-          <span className="comment-buttons" onClick={() => deleteComment(comment.id)}> <i className="fa fa-trash"></i></span>
+          <button className="comment-crud-buttons" onClick={() => setEditing(true)}><i className="fa fa-edit"></i></button>
+          <button className="comment-crud-buttons" onClick={() => deleteComment(comment.id)}> <i className="fa fa-trash"></i></button>
         </>
         : 
         ""}

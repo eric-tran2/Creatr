@@ -1,4 +1,18 @@
-.tag {
+@import "variables/fonts";
+
+
+.tagItem {
+  font-family: $montserrat;
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  margin-block-start: .5em;
+  margin-block-end: .5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 
 }
 
@@ -8,4 +22,11 @@
 
 .tagButton {
 
+}
+
+.deleteTagButton {
+  color: black;
+  :hover {
+    color: red;
+  }
 }

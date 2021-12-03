@@ -20,4 +20,14 @@
     }
   }
 
+  .comment-buttons {
+    color: gray;
+    text-decoration: none;
+    z-index: 3;
+  }
+    &:hover {
+    cursor: pointer;
+    color: blue;
+  }
+
 }

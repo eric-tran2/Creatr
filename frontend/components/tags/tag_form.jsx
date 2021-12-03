@@ -21,8 +21,6 @@ class TagForm extends React.Component {
 
   }
 
-
-
   render() {
     return (
       <form onSubmit={this.handleSubmit}>

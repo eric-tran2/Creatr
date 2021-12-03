@@ -37,7 +37,7 @@ console.log(commentUser)
             value={body}
             onChange={e => setBody(e.target.value)}
           />
-          <button onClick={handleUpdate}>Done</button>
+          <button className="edit-comment-done" onClick={handleUpdate}>Comment</button>
       </form>
       :  <p>
         {comment.body}

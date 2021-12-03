@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     > .comment-settings {
-      // display: none;
+      display: none;
       button:last-child {
         margin-left: 5px;
       }
@@ -25,10 +25,11 @@
   .comment-crud-buttons {
     color: gray;
     text-decoration: none;
-    z-index: 3;
+    background-color: transparent;
+    padding: 6.5px;
     &:hover {
     cursor: pointer;
-    color: blue;
+    color: rgb(65, 65, 65);
     }
   }
   

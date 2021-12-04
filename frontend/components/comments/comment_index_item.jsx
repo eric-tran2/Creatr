@@ -16,7 +16,7 @@ console.log(commentUser)
   return (
       <div className="comment">
         <div>
-          <Link to={`/user/${commentUser.id}`}>
+          <Link className="commenter-name" to={`/user/${commentUser.id}`}>
             {commentUser.first_name + " " + commentUser.last_name}
            </Link>
       <div className="comment-settings">

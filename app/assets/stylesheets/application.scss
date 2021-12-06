@@ -63,7 +63,6 @@ html, body, #root, #app {
   margin-top: 30px;
   box-shadow: 10px black;
   &:hover {
-    color: red;
     cursor: cell;
     box-shadow: 15px 15px 40px 15px rgba(39, 4, 4, 0.849);
     // transform: translateX(20px);
@@ -74,9 +73,5 @@ html, body, #root, #app {
 }
 
 
-
-// .testing {
-//   height: 100px;
-// }
 
 

@@ -63,7 +63,8 @@
     border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    height: 30%;
+    // height: 60%;
+    overflow-y: scroll;
     width: min(90% , 1500px);
     left: 50%; 
     transform: translateX(-50%);
@@ -93,9 +94,8 @@
     }
 
     .favoriteSection{
-      border: 1px solid rgb(0, 255, 149);
+      // border: 1px solid rgb(0, 255, 149);
       text-align: center;
-      // width: 20%;
       }
   }
 
@@ -110,7 +110,18 @@
   font-size: 30px;
   margin-left: 5px;
   background-color: #EFEFEF;
+  color: #128fdc;
     &:hover {
       cursor: pointer;
     }
+}
+
+.photo-title {
+  color: red;
+  font-family: "Montserrat";
+
+}
+
+.photo-description {
+  font-family: "Montserrat";
 }

@@ -17,7 +17,7 @@ class CommentForm extends React.Component {
     e.preventDefault();
     this.props.createComment(this.state)
     this.setState({body: ""})
-    document.getElementById("commentForm").value = ''
+    document.getElementById("comment-form").value = ''
   }
    
   render() {

@@ -33,7 +33,7 @@ class FavoriteShow extends React.Component {
     return (
       <div className="favoriteSection"> 
         <button className="favorite-button-background" onClick={this.toggleFave} > {like} </button>
-        <p>{this.props.allFavoriteCount + (this.props.allFavoriteCount === 1 ? " fave" : " faves")}</p>
+        <p className="fave-count">{this.props.allFavoriteCount + (this.props.allFavoriteCount === 1 ? " fave" : " faves")}</p>
       </div>
     )
   }

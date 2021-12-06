@@ -2,6 +2,7 @@
 
 
 .imageShow{
+  height: calc(100% - 39px);
   overflow-y: scroll;
   position: absolute;
   top: 0; left:0; right: 0; bottom: 0;
@@ -58,14 +59,11 @@
     }
 
   .commentsNfavorites{
-    height: calc(25% - 39px);
     position: absolute;
     top: 70%;
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    // height: 60%;
-    overflow-y: scroll;
     width: min(90% , 1500px);
     left: 50%; 
     transform: translateX(-50%);
@@ -121,12 +119,9 @@
   width: calc(100% - 1rem - 35px);
   font-weight: bold;
   font-family: "Montserrat";
-  font-size: 1.25rem;
+  font-size: 1rem;
   box-sizing: border-box;
   margin-top: 5px; margin-bottom: 5px;
-    &:hover{
-     background-color: white;
-   }
 }
 
 .photo-description {
@@ -134,7 +129,23 @@
   font-family: "Montserrat";
   font-size: 1rem;
   box-sizing: border-box;
-   &:hover{
-     background-color: white;
-   }
+}
+
+.title-description:hover {
+  background-color: white;
+}
+
+.photo-owner {
+  font-weight: bolder;
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+    &:hover {
+      text-decoration: underline;
+    }
+}
+
+.fave-count {
+  font-family: "Montserrat";
 }

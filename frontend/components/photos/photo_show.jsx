@@ -77,11 +77,13 @@ class Photo extends React.Component{
 
         <div className="commentsNfavorites">
           <div className="commentSection">
-                <Link to={`/user/${photo.author_id}`}>
+                <Link to={`/user/${photo.author_id}`} className="photo-owner">
                   {this.props.users[photo.author_id].first_name + " " + this.props.users[photo.author_id].last_name }
                 </Link>
-                <div className="photo-title">{photo.title}</div>
-                <div className="photo-description">{photo.description}</div>
+                <div className="title-description">
+                  <div className="photo-title">{photo.title}</div>
+                  <div className="photo-description">{photo.description}</div>
+                </div>
               <hr/>
               {commentItems}
               <CommentFormContainer idOfPhoto={photo.id}/>

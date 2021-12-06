@@ -39,7 +39,7 @@
   .commenter-name {
    font-family: $montserrat;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     color: #128fdc;
   }
 
@@ -78,5 +78,10 @@
       &:active {
       border-color: black;
       }
+  }
+
+  .comment-body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
   }
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import { AiFillStar, AiOutlineStar} from 'react-icons/ai';
+
 
 class FavoriteShow extends React.Component {
   constructor(props) {
@@ -23,7 +25,11 @@ class FavoriteShow extends React.Component {
 
 
   render() {
-    let like = this.props.favoriteId ? <i className="fa fa-star">Unlike</i> : <i className="fa fa-star">Like</i>
+    let like = this.props.favoriteId ? 
+    // <i className="fa fa-star">Unlike</i> 
+    <a target='_blank' rel="noopener noreferrer"><AiFillStar /></a>
+                                  : 
+    <a target='_blank' rel="noopener noreferrer"><AiOutlineStar /></a>
     return (
       <div className="favoriteSection"> 
         <button onClick={this.toggleFave} > {like} </button>

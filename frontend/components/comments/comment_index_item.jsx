@@ -39,7 +39,7 @@ console.log(commentUser)
           />
           <button className="edit-comment-done" onClick={handleUpdate}>Comment</button>
       </form>
-      :  <p>
+      :  <p className="comment-body">
         {comment.body}
       </p>}
     </div>

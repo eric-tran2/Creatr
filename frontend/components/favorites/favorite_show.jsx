@@ -27,13 +27,13 @@ class FavoriteShow extends React.Component {
   render() {
     let like = this.props.favoriteId ? 
     // <i className="fa fa-star">Unlike</i> 
-    <a target='_blank' rel="noopener noreferrer"><AiFillStar /></a>
+    <p target='_blank' rel="noopener noreferrer" className="favorites-button"><AiFillStar /></p>
                                   : 
-    <a target='_blank' rel="noopener noreferrer"><AiOutlineStar /></a>
+    <p target='_blank' rel="noopener noreferrer" className="favorites-button"><AiOutlineStar /></p>
     return (
       <div className="favoriteSection"> 
-        <button onClick={this.toggleFave} > {like} </button>
-        <p>{this.props.allFavoriteCount + (this.props.allFavoriteCount === 1 ? " like" : " likes")}</p>
+        <button className="favorite-button-background" onClick={this.toggleFave} > {like} </button>
+        <p>{this.props.allFavoriteCount + (this.props.allFavoriteCount === 1 ? " fave" : " faves")}</p>
       </div>
     )
   }

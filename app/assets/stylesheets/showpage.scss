@@ -1,9 +1,13 @@
+@import "variables/fonts";
+
+
 .imageShow{
   overflow-y: scroll;
   position: absolute;
   top: 0; left:0; right: 0; bottom: 0;
   // border: 1px yellow solid;
-  background-color: rgb(245, 245, 245);
+  background-color: #EFEFEF;
+
 
 
   .imageShowContent{
@@ -90,6 +94,8 @@
 
     .favoriteSection{
       border: 1px solid rgb(0, 255, 149);
+      text-align: center;
+      // width: 20%;
       }
   }
 
@@ -98,4 +104,13 @@
       resize: none;
     }
   }
+}
+
+.favorites-button {
+  font-size: 30px;
+  margin-left: 5px;
+  background-color: #EFEFEF;
+    &:hover {
+      cursor: pointer;
+    }
 }

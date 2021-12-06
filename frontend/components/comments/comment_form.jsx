@@ -26,7 +26,7 @@ class CommentForm extends React.Component {
           <textarea type='text'
           cols="50"
           rows="5"
-          id="commentForm"
+          id="comment-form"
           placeholder='Add a comment'
           onChange={this.handleInput}
           />

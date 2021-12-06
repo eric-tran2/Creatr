@@ -31,7 +31,8 @@ class TagForm extends React.Component {
           placeholder='Add a tag'
           onChange={this.handleInput}
         />
-        <input className="tagButton"
+        <br />
+        <input className="tag-button"
           disabled={this.state.name.length ? null : "disabled"}
           type='submit'
           value='Add tags' />

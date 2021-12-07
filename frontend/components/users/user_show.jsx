@@ -23,7 +23,12 @@ class UserShow extends React.Component{
 
         return (
             <>
-            <div> USER NAME</div>
+            <div> USER NAME
+
+            </div>
+                <hr/>
+                <div className="photostream-text">Photostream</div>
+                <hr/>
             <div className='user-show-grid'>
                 {photos}
             </div>

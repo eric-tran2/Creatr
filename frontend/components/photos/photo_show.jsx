@@ -11,6 +11,7 @@ class Photo extends React.Component{
     super(props)
     this.state = {loading: true}
   }
+  
   componentDidMount(){
     this.props.requestPhoto(this.props.match.params.photoId)
     this.props.allFavorites()

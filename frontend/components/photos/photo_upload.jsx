@@ -94,6 +94,7 @@ class PhotoUpload extends React.Component {
       <>
       <div className="upload-form">
           <form onSubmit={this.handleSubmit.bind(this)}>
+            <label className="submit-upload-button" htmlFor="file">Choose photos to upload</label>
         { this.state.photoUrl || this.props.photoId ? 
         <>
         <button>{this.props.photoId ? "Update photo" : "Submit your creation"}</button>
@@ -115,18 +116,19 @@ class PhotoUpload extends React.Component {
 
             {  
               this.props.photoId ? <img src={this.props.photos[this.props.photoId].picture_url} /> :
-            <>
+              <>
               <input type="file"
                 accept="image/*"
                 id="file"
                 onChange={this.handleFile.bind(this)}
                 />
-              <label className="submit-upload-button" htmlFor="file">Choose photos to upload</label>
               <div className="submitUploadButton">
               </div>
             </> 
             }
+            <div className="upload-photo-background">
             {preview}
+            </div>
           </form>
         </div>
       </>

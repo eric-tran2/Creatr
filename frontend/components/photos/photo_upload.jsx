@@ -118,7 +118,7 @@ class PhotoUpload extends React.Component {
                 id="file"
                 onChange={this.handleFile.bind(this)}
                 />
-              <label htmlFor="file">Choose photos to upload</label>
+              <label className="submit-upload-button" htmlFor="file">Choose photos to upload</label>
               <div className="submitUploadButton">
               </div>
             </> 

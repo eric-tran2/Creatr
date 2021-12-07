@@ -23,7 +23,7 @@ const Navbar = ({ currentUser, logout }) => {
     </nav>
   );
   const personalGreetingBar = () => (
-    <hgroup className="nav-bar" id="personalGreetingBar">
+    <div className="nav-bar" id="personalGreetingBar">
         <Link to='/explore'><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_inversed.png" alt="logo is broken" className="logo" /></Link>
 
         <Link to={`/user/${currentUser.id}`} className="youButton">
@@ -47,7 +47,7 @@ const Navbar = ({ currentUser, logout }) => {
       <div className="logout-div">
         <a className="logout-button" onClick={logout}>Log Out</a>
       </div>
-    </hgroup>
+    </div>
   );
 
   return currentUser ? personalGreetingBar() : sessionLinks();

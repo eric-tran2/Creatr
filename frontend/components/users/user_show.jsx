@@ -10,11 +10,11 @@ class UserShow extends React.Component{
         let photos = this.props.photos.map( photo => {
             if(photo.author_id === this.props.user){
                 return (
-                <ol className="user-show" key={photo.id}>
+                <div key={photo.id}>
                     <Link key={photo.id}  to={`/photos/${photo.id}`}> 
                         <img className="user-show-photo" src={photo.picture_url} alt="img of something but now broke" />
                     </Link>
-                </ol>
+                </div>
                 )
             } else {
                 return (null);
@@ -22,7 +22,7 @@ class UserShow extends React.Component{
         })
 
         return (
-            <div>
+            <div className='user-show-grid'>
                 {photos}
             </div>
         )

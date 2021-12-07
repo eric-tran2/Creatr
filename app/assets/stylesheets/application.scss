@@ -54,6 +54,7 @@ html, body, #root, #app {
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(0,330px));
   justify-content: space-evenly;
+  margin-top: 2%;
 }
 
 .explorePhotos {

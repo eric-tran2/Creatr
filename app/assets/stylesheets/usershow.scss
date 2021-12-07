@@ -41,10 +41,15 @@
   text-align: center;
   height: 330px;
   width: 100%;
-  margin-bottom: 100px;
   border-radius: 1px;
 }
 
-.user-banner {
+div.user-banner {
   height: 1%;
+    div.user-show-name {
+      font-family: $montserrat;
+      font-size: xx-large;
+      font-weight: 299;
+    }
 }
+

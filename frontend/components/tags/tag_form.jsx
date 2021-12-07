@@ -22,7 +22,6 @@ class TagForm extends React.Component {
   }
 
   render() {
-    // if (this.props.currentUser === this.props.tagger_id)
     return (
       <form onSubmit={this.handleSubmit}>
         <textarea type='text'

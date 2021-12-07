@@ -89,8 +89,15 @@ class Photo extends React.Component{
                 <FavoriteShowContainer idOfPhoto={photo.id}/>
               <hr/>
             <div className="tagSection">
-              <TagFormContainer idOfPhoto={photo.id} />
-              <hr/>
+
+              {this.props.currentUser.id === photo.author_id 
+                ? 
+                <>
+                <TagFormContainer idOfPhoto={photo.id} photo={photo} />
+                <hr/>
+                </>
+                : ""
+               }
               {tagItems}
             </div>
           </div>

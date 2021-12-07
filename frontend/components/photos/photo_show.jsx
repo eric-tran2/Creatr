@@ -69,10 +69,7 @@ class Photo extends React.Component{
                   : ""
                 } 
           </div>
-
-
         </div>
-
 
 
         <div className="commentsNfavorites">

@@ -21,9 +21,9 @@
   align-items: center;
   color: white;
   text-decoration: none;
-  &:hover{
-    color: gray;
-    cursor: wait;
+      &:hover{
+        color: gray;
+        cursor: wait;
   }
 }
 
@@ -78,4 +78,70 @@
 
 .logout-button:hover {
   color: gray;
+}
+
+.uploadButton .nav-bar-button-text {
+  font-family: $montserrat;
+  visibility: hidden;
+  font-size: small;
+   width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  margin-top: 55px;
+  &:hover {
+    visibility: visible;
+  }
+}
+
+.uploadButton:hover .nav-bar-button-text {
+  visibility: visible;
+}
+
+.youButton .nav-bar-button-text {
+  font-family: $montserrat;
+  visibility: hidden;
+  font-size: small;
+   width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  margin-top: 55px;
+  &:hover {
+    visibility: visible;
+  }
+}
+
+.youButton:hover .nav-bar-button-text {
+  visibility: visible;
+}
+
+.exploreButton .nav-bar-button-text {
+  font-family: $montserrat;
+  visibility: hidden;
+  font-size: small;
+   width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  margin-top: 55px;
+  &:hover {
+    visibility: visible;
+  }
+}
+
+.exploreButton:hover .nav-bar-button-text {
+  visibility: visible;
 }

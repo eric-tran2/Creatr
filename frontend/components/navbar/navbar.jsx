@@ -29,16 +29,19 @@ const Navbar = ({ currentUser, logout }) => {
 
         <Link to={`/user/${currentUser.id}`} className="youButton">
           <i className="fa fa-user"></i>
+            <span className="nav-bar-button-text">You</span>
         </Link>
 
         <Link to='/explore' className="exploreButton">
           <i className="fa fa-search"></i>
+            <span className="nav-bar-button-text">Explore</span>
         </Link>
 
       {/* <input type="text"placeholder="Search"className="searchbar"/> */}
       
         <Link to='/upload' className="uploadButton">
             <i className="fa fa-cloud-upload"></i>
+            <span className="nav-bar-button-text">Upload</span>
         </Link>
       
       <div className="header-name">

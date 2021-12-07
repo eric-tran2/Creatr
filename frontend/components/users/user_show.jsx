@@ -22,9 +22,12 @@ class UserShow extends React.Component{
         })
 
         return (
+            <>
+            <div> USER NAME</div>
             <div className='user-show-grid'>
                 {photos}
             </div>
+            </>
         )
     }
 }

@@ -28,10 +28,10 @@ html, body, #root, #app {
   // position: absolute;
 }
 
-// #root{
-//   position: absolute;
-//   z-index: -1000;
-// }
+#root{
+  // background-color: #212124f1;
+  // z-index: -5;
+}
 
 
 // .login-form-box {
@@ -45,10 +45,9 @@ html, body, #root, #app {
 }
 
 
-.gridParent {
-  display: block;  
-  // border: 5px solid blue;
-}
+// .gridParent {
+//   display: block;  
+// }
 
 .gridPhotos {
   display: grid;

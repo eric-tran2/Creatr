@@ -92,25 +92,27 @@ class PhotoUpload extends React.Component {
     }
     return (
       <>
-      <div className="uploadForm">
+      <div className="upload-form">
           <form onSubmit={this.handleSubmit.bind(this)}>
         { this.state.photoUrl || this.props.photoId ? 
         <>
         <button>{this.props.photoId ? "Update photo" : "Submit your creation"}</button>
-            <br />
             <input type="text"
               onChange={this.handleTitle.bind(this)}
               placeholder="Title" 
-              className="uploadTitle"/>
+              className="upload-title"/>
             <br/>
             <br/>
             <br/>
             <input type="text"
               onChange={this.handleDescription.bind(this)}
               placeholder="Description" 
-              className="uploadDescription"/></> : null}
+              className="upload-description"/>
+              </> 
+              : 
+              null}
 
-          {  
+            {  
               this.props.photoId ? <img src={this.props.photos[this.props.photoId].picture_url} /> :
             <>
               <input type="file"

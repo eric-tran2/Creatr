@@ -10,11 +10,11 @@ class UserShow extends React.Component{
         let photos = this.props.photos.map( photo => {
             if(photo.author_id === this.props.user){
                 return (
-                <div key={photo.id}>
+                <ol className="user-show" key={photo.id}>
                     <Link key={photo.id}  to={`/photos/${photo.id}`}> 
-                        <img src={photo.picture_url} alt="img of something but now broke" />
+                        <img className="user-show-photo" src={photo.picture_url} alt="img of something but now broke" />
                     </Link>
-                </div>
+                </ol>
                 )
             } else {
                 return (null);

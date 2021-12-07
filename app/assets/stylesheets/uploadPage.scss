@@ -18,12 +18,12 @@ label {
   cursor: pointer;
 }
 
-.uploadTitle {
+.upload-title {
   font-family: $montserrat;
 
 }
 
-.uploadDescription {
+.upload-description {
   font-family: $montserrat;
 
 }
@@ -37,4 +37,9 @@ label {
 }
 
 .submit-upload-button {
+}
+
+.upload-form {
+  background-color: #212124f1;
+
 }

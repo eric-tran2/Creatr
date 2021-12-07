@@ -10,14 +10,12 @@ const TagIndexItem = ({ tag, deleteTag, currentUser }) => {
          <div>
           {tag.name}
         </div>
-      <div className="tag-settings">
         {currentUser.id === tag.tagger_id ? 
-          <span className="deleteTagButton"onClick={() => deleteTag(tag.id)
+          <span className="delete-tag-button"onClick={() => deleteTag(tag.id)
             .then(() => { window.location.reload() })}>
               <i className="fa fa-times"></i></span> 
               : 
               ""}
-      </div>
     </div>
   )
 }

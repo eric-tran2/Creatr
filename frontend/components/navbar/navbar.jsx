@@ -12,8 +12,9 @@ const Navbar = ({ currentUser, logout }) => {
         </Link>
         
       </div>
-      <div>
-        <input type="text"placeholder="Search"className="searchbar"/></div>
+        {/* <div>
+          <input type="text"placeholder="Search"className="searchbar"/>
+        </div> */}
       <div className="login-signup">
           <a href="#/login" className="loginbutton">Log In</a>
           &nbsp;   &nbsp;

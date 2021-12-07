@@ -8,7 +8,9 @@ const mapStateToProps = (state, ownProps) => ({
   tag: {
     name: '',
     photo_id: parseInt(ownProps.idOfPhoto),
-    tagger_id: state.session.id
+    tagger_id: state.session.id,
+    currentUser: state.entities.users[state.session.id],
+
   }
 })
 

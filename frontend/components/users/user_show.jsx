@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 class UserShow extends React.Component{
     componentDidMount(){
         this.props.allPhotos();
+        this.props.allUsers();
     }
 
     render() {
@@ -23,8 +24,11 @@ class UserShow extends React.Component{
 
         return (
             <>
-            <div> USER NAME
-
+            <div className="user-banner"> 
+                <div> 
+                    <img src="https://creatr-seed.s3.amazonaws.com/mountains-minimalist-gradient-blue_3840x2160_xtrafondos.com.jpg" alt="logo is broken" className="banner-photo" />
+                    {this.props.users[this.props.user].first_name + " " + this.props.users[this.props.user].last_name}
+                </div>
             </div>
                 <hr/>
                 <div className="photostream-text">Photostream</div>

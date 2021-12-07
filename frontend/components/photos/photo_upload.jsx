@@ -97,6 +97,7 @@ class PhotoUpload extends React.Component {
         { this.state.photoUrl || this.props.photoId ? 
         <>
         <button>{this.props.photoId ? "Update photo" : "Submit your creation"}</button>
+          <br />
             <input type="text"
               onChange={this.handleTitle.bind(this)}
               placeholder="Title" 

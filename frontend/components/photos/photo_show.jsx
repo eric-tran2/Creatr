@@ -19,6 +19,10 @@ class Photo extends React.Component{
     // console.log(this.props.comments)
   }
 
+  componentWillUnmount() {
+    this.props.clearComment();
+  }
+
 
   render(){
     if (!this.props.photo || this.state.loading) {

@@ -4,6 +4,7 @@ import * as CommentUtil from '../util/comment_util'
 export const RECEIVE_ALL_COMMENTS = 'RECEIVE_ALL_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const CLEAR_COMMENT = 'CLEAR_COMMENT';
 
 export const receiveAllComments = comments => ({
   type: RECEIVE_ALL_COMMENTS,
@@ -18,6 +19,10 @@ export const receiveComment = comment => ({
 export const removeComment = commentId => ({
   type: REMOVE_COMMENT,
   commentId
+})
+
+export const clearComment = () => ({
+  type: CLEAR_COMMENT,
 })
 
 //thunk functions

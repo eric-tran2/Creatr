@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT } from "../actions/comment_actions";
+import { RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT, CLEAR_COMMENT } from "../actions/comment_actions";
 import { RECEIVE_PHOTO } from "../actions/photo_actions";
 
 
@@ -21,6 +21,8 @@ const commentReducer = (oldState = {}, action) => {
     case REMOVE_COMMENT:
       delete nextState[action.commentId]
       return nextState;
+    case CLEAR_COMMENT:
+      return {};
     default:
       return oldState;
   }

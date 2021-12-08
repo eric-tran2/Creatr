@@ -14,7 +14,8 @@ label {
   padding: 10px;
   display: flex;
   justify-content: center;
-  left: 46%; top: 45%;
+  left: .5%; 
+  top: 5%;
   cursor: pointer;
 }
 
@@ -42,9 +43,25 @@ label {
 
 .upload-form {
   // background-color: #212124f1;
-
+  margin-top: 5%;
 }
 
 .upload-photo-background {
   background-color: red;
+}
+
+.update-button {
+  color: white;
+  font-family: $montserrat;
+  position: absolute;
+  color:white;
+  background: #0063dc;
+  font-family: $montserrat;
+  border-radius: 4%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  left: 1%; 
+  top: 10%;
+  cursor: pointer;
 }

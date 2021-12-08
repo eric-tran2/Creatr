@@ -3,7 +3,7 @@ import { requestFavorites } from '../../actions/favorite_actions';
 import { requestPhoto } from '../../actions/photo_actions'
 import Photo from './photo_show'
 import { deleteComment, updateComment, clearComment } from '../../actions/comment_actions';
-import { deleteTag } from '../../actions/tag_actions';
+import { deleteTag, clearTag } from '../../actions/tag_actions';
 import { deletePhoto, updatePhoto } from '../../actions/photo_actions';
 import { requestUsers } from '../../actions/user_actions';
 
@@ -32,6 +32,7 @@ const mapDispatchToProps = dispatch => ({
   updatePhoto: (photo) => dispatch(updatePhoto(photo)),
   allUsers: () => dispatch(requestUsers()),
   clearComment: () => dispatch(clearComment()),
+  clearTag: () => dispatch(clearTag()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Photo)

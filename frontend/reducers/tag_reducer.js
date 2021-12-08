@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_TAGS, RECEIVE_TAG, REMOVE_TAG } from "../actions/tag_actions";
+import { RECEIVE_ALL_TAGS, RECEIVE_TAG, REMOVE_TAG, CLEAR_TAG } from "../actions/tag_actions";
 import { RECEIVE_PHOTO } from "../actions/photo_actions";
 
 
@@ -28,6 +28,8 @@ const tagReducer = (oldState = {}, action) => {
     case REMOVE_TAG:
       delete nextState[action.tagId]
       return nextState;
+    case CLEAR_TAG:
+      return {};
     default:
       return oldState;
   }

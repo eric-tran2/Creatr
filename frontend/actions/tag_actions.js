@@ -4,6 +4,7 @@ import * as TagUtil from '../util/tag_util'
 export const RECEIVE_ALL_TAGS = 'RECEIVE_ALL_TAGS';
 export const RECEIVE_TAG = 'RECEIVE_TAG';
 export const REMOVE_TAG = 'REMOVE_TAG';
+export const CLEAR_TAG = 'CLEAR_TAG';
 
 export const receiveAllTags = tags => ({
   type: RECEIVE_ALL_TAGS,
@@ -18,6 +19,10 @@ export const receiveTag = tag => ({
 export const removeTag = tagId => ({
   type: REMOVE_TAG,
   tagId
+})
+
+export const clearTag = () => ({
+  type: CLEAR_TAG,
 })
 
 

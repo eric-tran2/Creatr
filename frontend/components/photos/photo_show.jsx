@@ -21,6 +21,7 @@ class Photo extends React.Component{
 
   componentWillUnmount() {
     this.props.clearComment();
+    this.props.clearTag();
   }
 
 

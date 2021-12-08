@@ -22,6 +22,7 @@ class Photo extends React.Component{
   componentWillUnmount() {
     this.props.clearComment();
     this.props.clearTag();
+    this.props.clearFavorite();
   }
 
 

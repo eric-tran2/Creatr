@@ -5,10 +5,14 @@ class UserShow extends React.Component{
     componentDidMount(){
         this.props.allPhotos();
         this.props.allUsers();
-        // console.log(this.props.users)
+        console.log(this.props.user)
     }
 
     render() {
+        // console.log(this.props.users)
+        if (!this.props.users[this.props.user]) {
+            return null
+        }
         let photos = this.props.photos.map( photo => {
             if(photo.author_id === this.props.user){
                 return (

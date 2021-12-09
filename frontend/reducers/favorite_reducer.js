@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_FAVORITES, RECEIVE_FAVORITE, REMOVE_FAVORITE, CLEAR_FAVORITE } from "../actions/favorite_actions";
+import { RECEIVE_ALL_FAVORITES, RECEIVE_FAVORITE, REMOVE_FAVORITE,  } from "../actions/favorite_actions";
 import { RECEIVE_PHOTO } from "../actions/photo_actions";
 
 
@@ -21,8 +21,8 @@ const favoriteReducer = (oldState = {}, action) => {
     case REMOVE_FAVORITE:
       delete nextState[action.favoriteId]
       return nextState;  
-    case CLEAR_FAVORITE: 
-      return {};
+    // case CLEAR_FAVORITE: 
+    //   return {};
     default:
       return oldState;
   }

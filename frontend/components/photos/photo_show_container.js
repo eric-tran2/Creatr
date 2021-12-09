@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { requestFavorites, clearFavorite } from '../../actions/favorite_actions';
+import { requestFavorites, } from '../../actions/favorite_actions';
 import { requestPhoto } from '../../actions/photo_actions'
 import Photo from './photo_show'
 import { deleteComment, updateComment, clearComment } from '../../actions/comment_actions';
@@ -33,7 +33,7 @@ const mapDispatchToProps = dispatch => ({
   allUsers: () => dispatch(requestUsers()),
   clearComment: () => dispatch(clearComment()),
   clearTag: () => dispatch(clearTag()),
-  clearFavorite: () => dispatch(clearFavorite())
+  // clearFavorite: () => dispatch(clearFavorite())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Photo)

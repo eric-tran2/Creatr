@@ -28,11 +28,11 @@ const mapStateToProps = (state, ownProps) => {
       }
     }
   }
-
+  // console.log(ownProps.idOfPhoto);
   return {
     // favorite: {
-    // photo_id: parseInt(ownProps.idOfPhoto),
-    photo_id: Object.values(state.entities.photos)[0].id,
+    photo_id: parseInt(ownProps.idOfPhoto),
+    // photo_id: Object.values(state.entities.photos)[0].id,
     favoriter_id: state.session.id,
     favoriteId,
     allFavoriteCount,

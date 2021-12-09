@@ -16,6 +16,7 @@ class FavoriteShow extends React.Component {
 
   toggleFave() {
     const data = { photo_id: this.props.photo_id, favoriter_id: this.props.favoriter_id }
+    // console.log(this.props, data);
     if (this.props.favoriteId) {
       this.props.deleteFavorite(this.props.favoriteId);
     } else {

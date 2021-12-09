@@ -14,8 +14,7 @@ label {
   padding: 10px;
   display: flex;
   justify-content: center;
-  left: .5%; 
-  top: 5%;
+  left: 46%; 
   cursor: pointer;
 }
 
@@ -32,23 +31,17 @@ label {
 #upload-preview {
   max-height: 80%;
   position: absolute;
-  top: 50%; left: calc(50% + 106px);
+  top: 50%; left: calc(50% + 20px);
   transform: translate(-50%, -50%);
   max-width: calc(100% - 212px);
 }
 
-// .submit-upload-button::after {
-//   visibility: hidden;
-// }
-
 .upload-form {
-  // background-color: #212124f1;
-  margin-top: 5%;
+  background-color: #212124f1;
+  height: 100vh;
+
 }
 
-.upload-photo-background {
-  background-color: red;
-}
 
 .update-button {
   color: white;

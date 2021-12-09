@@ -86,22 +86,28 @@ class PhotoUpload extends React.Component {
   }
 
   render() {
-    const preview = this.state.photoUrl ? <img id="upload-preview" src={this.state.photoUrl} /> : null;
+    const choosePicture = <label className="submit-upload-button" htmlFor="file">Choose photos to upload</label>
+    const preview = this.state.photoUrl ? <img id="upload-preview" src={this.state.photoUrl} /> : choosePicture;
     if (this.state.loading) {
       return null
     }
+    // if (preview !== null) {
+    //   choosePicture
+    // }
     return (
       <>
       <div className="upload-form">
           <form onSubmit={this.handleSubmit.bind(this)}>
         { this.state.photoUrl || this.props.photoId ? 
         <>
-        <button className="update-button">{this.props.photoId ? "Update photo" : "Submit your creation"}</button>
+        <button className="update-button">{this.props.photoId ? "Update photo" : "Add"}</button>
           <br />
+          <div>
             <input type="text"
               onChange={this.handleTitle.bind(this)}
               placeholder="Title" 
               className="upload-title"/>
+              </div>
             <br/>
             <br/>
             <br/>
@@ -113,9 +119,6 @@ class PhotoUpload extends React.Component {
               : 
               null}
 
-            <div className="upload-photo-background">
-            {preview}
-            </div>
             {  
               this.props.photoId ? <img src={this.props.photos[this.props.photoId].picture_url} /> :
               <>
@@ -124,9 +127,11 @@ class PhotoUpload extends React.Component {
                 id="file"
                 onChange={this.handleFile.bind(this)}
                 />
-              <div className="submitUploadButton">
-              <label className="submit-upload-button" htmlFor="file">Choose photos to upload</label>
-              </div>
+              {/* <div className="submitUploadButton">
+                <label className="submit-upload-button" htmlFor="file">Choose photos to upload</label>
+              </div> */}
+               {/* {choosePicture} */}
+                {preview}
             </> 
             }
           </form>

@@ -39,22 +39,25 @@ label {
 .upload-form {
   background-color: #212124f1;
   height: 100vh;
-
-}
-
-
-.update-button {
-  color: white;
-  font-family: $montserrat;
   position: absolute;
-  color:white;
-  background: #0063dc;
-  font-family: $montserrat;
-  border-radius: 4%;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  left: 1%; 
-  top: 10%;
-  cursor: pointer;
-}
+  top: 55px; left:0; right: 0; 
+  // height: calc(70% - 55px);
+      background-color: #212124f1;
+
+    }
+    
+.update-button {
+       color: white;
+       font-family: $montserrat;
+       position: absolute;
+       color:white;
+       background: #0063dc;
+       font-family: $montserrat;
+       border-radius: 4%;
+       padding: 10px;
+       display: flex;
+       justify-content: center;
+       right: calc(100% - 400px);
+       bottom: calc(100% - 63px);
+       cursor: pointer;
+     }

@@ -100,7 +100,7 @@ class PhotoUpload extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
         { this.state.photoUrl || this.props.photoId ? 
         <>
-        <button className="update-button">{this.props.photoId ? "Update photo" : "Add"}</button>
+        <button className="update-button">{this.props.photoId ? "Update photo" : "Add photo"}</button>
           <br />
           <div>
             <input type="text"
@@ -109,8 +109,6 @@ class PhotoUpload extends React.Component {
               className="upload-title"/>
               </div>
             <br/>
-            <br/>
-            <br/>
             <input type="text"
               onChange={this.handleDescription.bind(this)}
               placeholder="Description" 
@@ -118,7 +116,7 @@ class PhotoUpload extends React.Component {
               </> 
               : 
               null}
-
+              <hr/>
           </form>
             {  
               this.props.photoId ? <img src={this.props.photos[this.props.photoId].picture_url} /> :

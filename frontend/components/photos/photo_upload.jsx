@@ -118,13 +118,15 @@ class PhotoUpload extends React.Component {
               null}
               <hr/>
           </form>
+          <div className="update-show-modells">
             {  
-              this.props.photoId ? <img src={this.props.photos[this.props.photoId].picture_url} /> :
+              this.props.photoId ? <img className="update-page-photo" src={this.props.photos[this.props.photoId].picture_url} /> :
               <>
               <input type="file"
                 accept="image/*"
                 id="file"
                 onChange={this.handleFile.bind(this)}
+                // className="update-page-photo"
                 />
               {/* <div className="submitUploadButton">
                 <label className="submit-upload-button" htmlFor="file">Choose photos to upload</label>
@@ -133,6 +135,7 @@ class PhotoUpload extends React.Component {
                 {preview}
             </> 
             }
+          </div>
         </div>
       </>
     )

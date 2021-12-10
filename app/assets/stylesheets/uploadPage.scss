@@ -41,8 +41,9 @@ label {
   height: 100vh;
   position: absolute;
   top: 55px; left:0; right: 0; 
+
+
   // height: calc(70% - 55px);
-      background-color: #212124f1;
 
     }
     
@@ -61,3 +62,17 @@ label {
        bottom: calc(100% - 63px);
        cursor: pointer;
      }
+.update-show-modells {
+      position: absolute;
+      top: 141px; left:0; right: 0; 
+      height: calc(70% - 55px - 86px);
+      background-color: #212124f1;
+}
+
+.update-page-photo {
+   max-width: 80vw;
+      max-height: 80%;
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%,-50%);
+}

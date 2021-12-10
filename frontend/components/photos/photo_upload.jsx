@@ -119,6 +119,7 @@ class PhotoUpload extends React.Component {
               : 
               null}
 
+          </form>
             {  
               this.props.photoId ? <img src={this.props.photos[this.props.photoId].picture_url} /> :
               <>
@@ -134,7 +135,6 @@ class PhotoUpload extends React.Component {
                 {preview}
             </> 
             }
-          </form>
         </div>
       </>
     )

@@ -12,5 +12,28 @@
 }
 
 .footerButtons {
-  color: red;
+  display: flex;
+
+    svg{
+        font-size: 30px;
+        padding: 0px 1.5rem;
+        text-decoration: none;
+    }
+
+    a:link{
+        color: darkgray;
+    }
+    a:visited{
+        color: darkgray;
+    }
+    a:hover{
+        color: white;
+    }
+    a:focus{
+        color: darkgray;
+    }
+    a:active{
+        color: darkgray;
+    }
 }
+

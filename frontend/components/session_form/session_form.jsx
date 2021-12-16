@@ -129,6 +129,7 @@ class SessionForm extends React.Component {
               <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
             <br />
+            <br />
             {guest_login()}
             <br />
             <br />

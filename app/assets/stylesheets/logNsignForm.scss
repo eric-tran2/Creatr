@@ -38,7 +38,7 @@
 
 .guestbutton {
   color:white;
-  background-color:#128fdc;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,47,121,1) 35%, rgba(0,212,255,1) 100%);
   font-family: $montserrat;
   font-size: 15px;
   border-radius: 4%;
@@ -50,7 +50,7 @@
 }
 
 .guestbutton:hover {
-  background-color: #0e77b8;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(9,47,121,1) 50%, rgba(0,212,255,1) 120%);
   cursor: pointer;
 }
 

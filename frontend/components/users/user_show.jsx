@@ -18,7 +18,7 @@ class UserShow extends React.Component{
                 return (
                 <div key={photo.id}>
                     <Link key={photo.id}  to={`/photos/${photo.id}`}> 
-                        <img className="user-show-photo" src={photo.picture_url} alt="img of something but now broke" />
+                        <img className="user-show-photo" src={photo.picture_url} alt="img loading" />
                     </Link>
                 </div>
                 )

@@ -76,7 +76,7 @@ class Photo extends React.Component {
           <div className="modells">
             <img
               src={photo.picture_url}
-              alt="img of something but now broke"
+              alt="img loading"
               className="showpagephoto"
               key={photo.id}
             />

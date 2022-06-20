@@ -131,8 +131,7 @@ class SessionForm extends React.Component {
             <br />
             <br />
             {guest_login()}
-            <br />
-            <br />
+            <hr/>
             {this.props.member} {this.props.navLink}
           </div>
         </form>

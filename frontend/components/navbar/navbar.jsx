@@ -8,7 +8,7 @@ const Navbar = ({ currentUser, logout }) => {
     <nav className="nav-bar">
       <div>
         <Link to="/">
-            <img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_more_transparent.png" alt="logo is broken" className="logo" />
+            <img src="https://creatr-seed.s3.amazonaws.com/Astronaut_logo.png" alt="logo is broken" className="logo" />
         </Link>
         
       </div>
@@ -25,7 +25,7 @@ const Navbar = ({ currentUser, logout }) => {
   );
   const personalGreetingBar = () => (
     <div className="nav-bar" id="personalGreetingBar">
-        <Link to='/explore'><img src="https://creatr-seed.s3.amazonaws.com/creatr_logo_inversed.png" alt="logo is broken" className="logo" /></Link>
+        <Link to='/explore'><img src="https://creatr-seed.s3.amazonaws.com/Astronaut_logo_inversed.png" alt="logo is broken" className="logo" /></Link>
 
         <Link to={`/user/${currentUser.id}`} className="youButton">
           <i className="fa fa-user"></i>

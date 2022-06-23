@@ -44,33 +44,85 @@ html, body, #root, #app {
 }
 
 
+// .gridParent {
+//   display: flex;
+//   width: 80%;
+//   margin: 125px auto;
+
+//   .gridPhotos {
+//     display: grid;
+//     grid-gap: 5px;
+//     // grid-template-columns: minmax(0, 330px);
+//     // grid-template-columns: auto auto auto auto;
+//     // grid-template-columns: 200px 5fr;
+//     grid-template-columns: 100px repeat(2, 1fr auto);
+  
+//     .img {
+//       max-height: 200px;
+//       min-width: 10%;
+//       border: 1px solid gray;
+//       object-fit: cover;
+//     }
+//   }
+// }
+
+
 .gridParent {
-  display: block;  
+  // line-height: 0; 
+  -webkit-column-count: 5;
+  -webkit-column-gap: 5px;
+  -moz-column-count: 5;
+  -moz-column-gap: 5px;
+  column-count: 5;
+  column-gap: 5px;  
+  row-gap: 20px;
+  width: 80%;
+  margin: 125px auto;
 }
 
-.gridPhotos {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(0,330px));
-  justify-content: space-evenly;
-  margin-top: 2%;
+.img {
+  width: 100% !important;
+  height: auto !important;
 }
 
-.explorePhotos {
-  // border: 5px solid red;
-  height: 330px;
-  width: 100%;
-  margin-bottom: 100px;
-  box-shadow: 3px 3px 10px 3px black;
-  border-radius: 10px;
-  &:hover {
-    cursor: cell;
-    box-shadow: 18px 18px 48px 18px rgba(39, 4, 4, 0.849);
-    transform: translate(3%, -3%);
-    transition: 1s all;
+@media (max-width: 1200px) {
+  .gridParent {
+  -moz-column-count:4;
+  -webkit-column-count:4;
+  column-count:4;
+  }
+}
+@media (max-width: 1000px) {
+  .gridParent {
+  -moz-column-count:3;
+  -webkit-column-count:3;
+  column-count: 3;
+  }
+}
+@media (max-width: 800px) {
+  .gridParent {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  }
+}
+@media (max-width: 400px) {
+  .gridParent {
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1;
   }
 }
 
+// .gridParent .img {
+//   columns: 3 250px;
+//   gap: 15px;
+// }
 
+// .gridParent .img img {
+//   margin-bottom: 10px;
+//   border-radius: 5px;
+//   width: 100%;
+// }
 
 

@@ -8,26 +8,20 @@ class Photos extends React.Component{
     componentDidMount(){
         this.props.allPhotos();
         this.props.allFavorites();
-        // this.props.allUsers();
     }
 
     render(){
-        let cont = this.props.photos;
-        if(!cont) return null;
-        const allPhotos = (
-            <ul className='gridPhotos'>
-                {cont.reverse().map(photo => (
-                    <Link key={photo.id}  to={`/photos/${photo.id}`}> 
-                        <img src={photo.picture_url} alt="img loading" className='explorePhotos'  />
-                    </Link>
-                ))}
-            </ul>
-        )
+        const { photos } = this.props
+        if (!photos) return null
         return (
             <>
-            <div className='gridParent'>
-                {allPhotos}
-            </div>
+                <div className='gridParent'>
+                    {photos.reverse().map(photo => (
+                        <Link key={photo.id}  to={`/photos/${photo.id}`}> 
+                            <img src={photo.picture_url} alt="img loading" className='img' />
+                        </Link>
+                    ))}
+                </div>
             </>
         )
     }

@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
-              <img src="https://creatr-seed.s3.amazonaws.com/c_logo.png" alt="broken" className="formLogo"/>
+              <img src="https://creatr-seed.s3.amazonaws.com/astronaut_crossover.png" alt="broken" className="formLogo"/>
           <div className="login-form">
             <h1>Welcome to Creatr!</h1>
             <br />

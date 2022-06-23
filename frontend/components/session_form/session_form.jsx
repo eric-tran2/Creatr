@@ -103,12 +103,10 @@ class SessionForm extends React.Component {
           <br />
               <img src="https://creatr-seed.s3.amazonaws.com/astronaut_crossover.png" alt="broken" className="formLogo"/>
           <div className="login-form">
-            <h1>Welcome to Creatr!</h1>
-            <br />
+            <h1 className='welcome-text'>Welcome to Creatr!</h1>
             <div className="errorMsg">
           {this.renderErrors()}
             </div>
-            <br />
               {signupForm()}
               <input 
                 type="text"
@@ -125,7 +123,6 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
                 />
-              <br />
               <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
             <br />

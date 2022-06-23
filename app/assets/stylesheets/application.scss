@@ -83,6 +83,12 @@ html, body, #root, #app {
 .img {
   width: 100% !important;
   height: auto !important;
+
+  &:hover {
+    cursor: cell;
+    transform: translate(5%, -5%);
+    transition: 1s all;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -126,3 +132,9 @@ html, body, #root, #app {
 // }
 
 
+    // &:hover {
+    //   cursor: cell;
+    //   box-shadow: 18px 18px 48px 18px rgba(39, 4, 4, 0.849);
+    //   transform: translate(3%, -3%);
+    //   transition: 1s all;
+    // }

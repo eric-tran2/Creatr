@@ -89,7 +89,7 @@ class SessionForm extends React.Component {
     if (this.props.formType !== 'signup') {
       guest_login = () => (
         // <form className='guest' onSubmit={this.handleSubmit}>
-          <button className='guestbutton' onClick={this.guestLogin}>guest login</button>
+          <button className='guestbutton' onClick={this.guestLogin}>Guest Login</button>
         // </form>
       )
     }
@@ -124,8 +124,8 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
                 />
-              <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <br />
+            <button className="guestbutton" type="submit" value={this.props.formType}>{this.props.formType === 'signup' ? 'Sign Up' : 'Login'}</button>
             <br />
             <br />
             {guest_login()}
